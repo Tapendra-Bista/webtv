@@ -28,7 +28,7 @@ class Footer extends StatelessWidget {
                 children: [
               TextSpan(
                   text:
-                      "\n\nIt is our policy to respond to clear notices of alleged copyright infringement. If you are a copyright owner or an agent thereof, and you believe that any content hosted on our web site (mobileTv) infringes your copyrights, then you may submit a notification for us in email (tapendrabista01@gmail.com)",
+                      "\nIt is our policy to respond to clear notices of alleged copyright infringement. If you are a copyright owner or an agent thereof, and you believe that any content hosted on our web site (mobileTv) infringes your copyrights, then you may submit a notification for us in email (tapendrabista01@gmail.com)",
                   style: mytextStyle!.copyWith(fontSize:15, color: Colors.black))
             ])),
       ),
