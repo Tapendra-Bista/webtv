@@ -93,7 +93,7 @@ class _HomeState extends State<Home> {
                                 .provideUrl(newUrl: channelList[index]['url']!);
                             Navigator.pushNamed(
                               context,
-                              PlayStream.routeName,
+                              Play.routeName,
                             );
                           },
                           child: ListItems(

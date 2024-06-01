@@ -4,17 +4,17 @@ import 'package:mobiletv/iframe/iframe.dart';
 import 'package:mobiletv/provider/provider.dart';
 import 'package:provider/provider.dart';
 
-class PlayStream extends StatefulWidget {
-  static const routeName = "/PlayStream";
-  const PlayStream({
+class Play extends StatefulWidget {
+  static const routeName = "/Play";
+  const Play({
     super.key,
   });
 
   @override
-  State<PlayStream> createState() => _PlayStreamState();
+  State<Play> createState() => _PlayState();
 }
 
-class _PlayStreamState extends State<PlayStream> {
+class _PlayState extends State<Play> {
   @override
   Widget build(BuildContext context) {
     var mytextStyle = Theme.of(context).textTheme.headlineMedium;

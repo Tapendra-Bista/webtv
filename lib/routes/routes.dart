@@ -5,5 +5,5 @@ var routes = {
   Home.routeName: (context) => const Home(
         appbarName: "Mobile Tv",
       ),
-  PlayStream.routeName: (contex) => const PlayStream(),
+  Play.routeName: (contex) => const Play(),
 };
