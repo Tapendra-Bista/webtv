@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:mobiletv/category/category.dart';
 import 'package:mobiletv/channels/channels.dart';
@@ -67,8 +66,8 @@ class _HomeState extends State<Home> {
                 )),
                 SizedBox(
                   width: double.infinity,
-                  height:mQ.width *
-                      (channelList.length+itemNumber) /
+                  height: mQ.width *
+                      (channelList.length + itemNumber) /
                       (itemNumber == 5
                               ? itemNumber * 4.4
                               : itemNumber == 2
