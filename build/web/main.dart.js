@@ -67323,7 +67323,7 @@ p=A.EY(s,!1,t.DU)
 q=B.ei[q].k(0,"url")
 q.toString
 p.AO(q)
-A.ot(s).LR("/PlayStream",null,t.X)},
+A.ot(s).LR("/Play",null,t.X)},
 $S:0}
 A.CV.prototype={
 O(a){var s=t.l,r=A.cC(a,null,s).w
@@ -72807,7 +72807,7 @@ r($,"aA4","adp",()=>{var q=A.amu(B.k,-1,B.K,0.2)
 return A.amB(new A.dc(q,q,q,q),A.Qz(5),null,B.G,null,null,B.bq)})
 r($,"aA8","alE",()=>{var q=null
 return A.QN(q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,A.arM(A.aqr(A.Qz(3),B.wA),t.KX),q,q,q,q,q,q)})
-r($,"aAp","alJ",()=>A.aK(["/home",new A.a9U(),"/PlayStream",new A.a9V()],t.N,A.aa("ac(@)")))
+r($,"aAp","alJ",()=>A.aK(["/home",new A.a9U(),"/Play",new A.a9V()],t.N,A.aa("ac(@)")))
 r($,"aAh","alF",()=>A.agR(null,B.yu,B.i,B.Mr,null))
 s($,"aza","akY",()=>!A.aa("E<m>").b(A.b([],t.Z)))})();(function nativeSupport(){!function(){var s=function(a){var m={}
 m[a]=1
