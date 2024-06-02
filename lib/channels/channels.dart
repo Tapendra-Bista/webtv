@@ -79,6 +79,13 @@ const List<Map<String, String>> channelList = [
     'image': "image/ssfootball.png",
     'url': 'https://stream.crichd.vip/update/ssfotbal.php',
   },
+ {
+    'name': "Sky box office",
+    'image': "image/box.png",
+    'url': 'https://stream.crichd.vip/update/ch20.php.php',
+  },
+
+
    {
     'name': "Laliga tv",
     'image': "image/laliga.png",
