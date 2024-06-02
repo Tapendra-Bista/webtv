@@ -29,7 +29,8 @@ class ChannelProvider extends ChangeNotifier {
     _iFrameElement.style.overflow = 'hidden'; // Hide the scroll
     _iFrameElement.style.border = 'none';
     _iFrameElement.src = channelUrl;
-
+ _iFrameElement.allowFullscreen = true;
+ debugPrint(channelUrl);
     ui.platformViewRegistry.registerViewFactory(
       'iframeElement',
       (int viewId) => _iFrameElement,
@@ -40,7 +41,7 @@ class ChannelProvider extends ChangeNotifier {
       key: UniqueKey(),
     );
 
-    _iFrameElement.allowFullscreen = true;
+   
 
     notifyListeners();
   }
