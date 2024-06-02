@@ -67185,7 +67185,7 @@ AI(){var s=0,r=A.X(t.H),q=this,p,o
 var $async$AI=A.Y(function(a,b){if(a===1)return A.U(b,r)
 while(true)switch(s){case 0:p=q.c
 o=p.style
-o.height="90%"
+o.height="75%"
 o=p.style
 o.width="100%"
 o=p.style
