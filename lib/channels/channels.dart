@@ -105,6 +105,11 @@ const List<Map<String, String>> channelList = [
     'image': "image/mix.jpg",
     'url': 'https://stream.crichd.vip/update/skysmix.php',
   },
+      {
+    'name': "ITV 4 UK",
+    'image': "image/i.jpg",
+    'url': 'https://stream.crichd.vip/update/itv4.php',
+  },
 ];
 
 
