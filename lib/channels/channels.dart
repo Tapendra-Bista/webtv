@@ -100,5 +100,11 @@ const List<Map<String, String>> channelList = [
     'image': "image/f1.png",
     'url': 'https://stream.crichd.vip/update/skyf1.php',
   },
+    {
+    'name': "Sky sports mix",
+    'image': "image/mix.jpg",
+    'url': 'https://stream.crichd.vip/update/skysmix.php',
+  },
 ];
+
 
