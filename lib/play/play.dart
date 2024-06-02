@@ -22,6 +22,7 @@ class _PlayState extends State<Play> {
 
     return Scaffold(
       appBar: AppBar(
+         automaticallyImplyLeading: false,
         centerTitle: true,
         backgroundColor: primaryColor,
         title: Text(context.watch<ChannelNameProvider>().channelName!,

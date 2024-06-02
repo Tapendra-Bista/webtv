@@ -26,6 +26,7 @@ class _HomeState extends State<Home> {
 
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         centerTitle: true,
         backgroundColor: primaryColor,
         title: Text(widget.appbarName, style: mytextStyle),

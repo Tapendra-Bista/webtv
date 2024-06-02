@@ -7,7 +7,7 @@ const List<Map<String, String>> channelList = [
   {
     'name': "Sky sports",
     'image': "image/sky.png",
-    'url': 'https://stream.crichd.vip/update/sky2.php',
+    'url': 'https://stream.crichd.vip/update/skys2.php',
   },
   {
     'name': "Star sports",
@@ -83,6 +83,11 @@ const List<Map<String, String>> channelList = [
     'name': "Laliga tv",
     'image': "image/laliga.png",
     'url': 'https://stream.crichd.vip/update/laligauk.php',
+  },
+    {
+    'name': "PTV sports",
+    'image': "image/ptv.png",
+    'url': 'https://stream.crichd.vip/update/ptv.php',
   },
 ];
 
