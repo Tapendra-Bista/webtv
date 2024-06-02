@@ -31,6 +31,14 @@ class ListItems extends StatelessWidget {
         const SizedBox(
           height: 5,
         ),
+        Divider(
+          color: Colors.black.withOpacity(0.3),
+          height:1,
+          thickness:1,
+        ),
+         const SizedBox(
+          height: 5,
+        ),
         Text(channelName, style: mytextStyle!.copyWith(fontSize: 14)),
                 ],
               ),
