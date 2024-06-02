@@ -41,7 +41,7 @@ const List<Map<String, String>> channelList = [
   },
   {
     'name': "Ten sports",
-    'image': "image/tens.png",
+    'image': "image/ts.jpg",
     'url': 'https://stream.crichd.vip/update/tensp.php',
   },
   {

@@ -7698,7 +7698,7 @@ else if(o==="%")A.qm(a,s,"ZoneID should not contain % anymore")
 i.a=m+o
 s+=3
 r=s
-q=!0}else if(p<127&&(B.eg[p>>>4]&1<<(p&15))!==0){if(q&&65<=p&&90>=p){if(i==null)i=new A.bW("")
+q=!0}else if(p<127&&(B.eh[p>>>4]&1<<(p&15))!==0){if(q&&65<=p&&90>=p){if(i==null)i=new A.bW("")
 if(r<s){i.a+=B.d.ap(a,r,s)
 r=s}q=!1}++s}else{if((p&64512)===55296&&s+1<c){l=a.charCodeAt(s+1)
 if((l&64512)===56320){p=(p&1023)<<10|l&1023|65536
@@ -7788,7 +7788,7 @@ q=A.a9g(s)
 p=A.a9g(r)
 if(q<0||p<0)return"%"
 o=q*16+p
-if(o<127&&(B.eg[B.f.eA(o,4)]&1<<(o&15))!==0)return A.dh(c&&65<=o&&90>=o?(o|32)>>>0:o)
+if(o<127&&(B.eh[B.f.eA(o,4)]&1<<(o&15))!==0)return A.dh(c&&65<=o&&90>=o?(o|32)>>>0:o)
 if(s>=97||r>=97)return B.d.ap(a,b,b+3).toUpperCase()
 return null},
 abZ(a){var s,r,q,p,o,n="0123456789ABCDEF"
@@ -37972,10 +37972,10 @@ A.a7L.prototype={
 $2(a,b){var s=this.b,r=this.a
 s.a+=r.a
 r.a="&"
-r=A.O3(B.eg,a,B.S,!0)
+r=A.O3(B.eh,a,B.S,!0)
 r=s.a+=r
 if(b!=null&&b.length!==0){s.a=r+"="
-r=A.O3(B.eg,b,B.S,!0)
+r=A.O3(B.eh,b,B.S,!0)
 s.a+=r}},
 $S:288}
 A.a7K.prototype={
@@ -61160,7 +61160,7 @@ r=A.b([],s)
 q=c.y
 q.toString
 p=J.bi(q,null)
-if(p==null)p=B.ef
+if(p==null)p=B.eg
 o=A.A(t.ob,t.UX)
 q=c.y
 q.toString
@@ -61180,8 +61180,8 @@ if(j){r=A.b([],s)
 i=c.y
 i.toString
 p=J.bi(i,h.gcL())
-if(p==null)p=B.ef}else{r=B.ef
-p=B.ef}l=h
+if(p==null)p=B.eg}else{r=B.eg
+p=B.eg}l=h
 continue}if(j){i=h.b
 i=i==null?b:i.gKW()
 j=i===!0}else j=!1
@@ -67145,16 +67145,16 @@ $1(a){a.c=!1
 return!0},
 $S:134}
 A.a58.prototype={
-$2(a,b){var s,r=null,q=B.eh[b].k(0,"name")
+$2(a,b){var s,r=null,q=B.ef[b].k(0,"name")
 q.toString
-s=B.eh[b].k(0,"image")
+s=B.ef[b].k(0,"image")
 s.toString
 return A.aaO(r,new A.D9(this.a,s,q,r),B.bc,!1,r,r,r,r,r,r,r,r,r,r,r,r,r,r,new A.a56(a,b),r,r,r)},
 $S:406}
 A.a56.prototype={
-$0(){var s=this.a,r=A.EO(s,!1,t.X5),q=this.b,p=B.eh[q].k(0,"url")
+$0(){var s=this.a,r=A.EO(s,!1,t.X5),q=this.b,p=B.ef[q].k(0,"url")
 p.toString
-q=B.eh[q].k(0,"name")
+q=B.ef[q].k(0,"name")
 q.toString
 r.Bf(q,p)
 A.us(s).LI("/Play",null,t.X)},
@@ -70279,6 +70279,31 @@ B.iW=new A.yd(0,"named")
 B.wc=new A.yd(1,"anonymous")
 B.Bj=A.b(s([B.iW,B.wc]),A.aa("w<yd>"))
 B.Bn=A.b(s([B.fi,B.fj]),A.aa("w<qY>"))
+B.O={name:0,image:1,url:2}
+B.DL=new A.aL(B.O,["Sky sports football","image/skyfootball.png","https://stream.crichd.vip/update/skysfotb.php"],t.w)
+B.DV=new A.aL(B.O,["Sky sports","image/sky.png","https://stream.crichd.vip/update/skys2.php"],t.w)
+B.DM=new A.aL(B.O,["Star sports","image/star.jpg","https://stream.crichd.vip/update/star.php"],t.w)
+B.DT=new A.aL(B.O,["Star sports hindi","image/starhindi.jpg","https://stream.crichd.vip/update/star1hi.php"],t.w)
+B.DS=new A.aL(B.O,["Willow criket","image/willow.jpg","https://stream.crichd.vip/update/willowcricket.php"],t.w)
+B.E_=new A.aL(B.O,["Sony espn","image/espn.jpg",u._],t.w)
+B.DU=new A.aL(B.O,["Fox cricket","image/fox.jpg","https://stream.crichd.vip/update/fox501.php"],t.w)
+B.DY=new A.aL(B.O,["Ten 1","image/ten1.png","https://stream.crichd.vip/update/ten1.php"],t.w)
+B.E1=new A.aL(B.O,["Ten sports","image/ts.jpg","https://stream.crichd.vip/update/tensp.php"],t.w)
+B.E5=new A.aL(B.O,["Spotrs tv1","image/1.jpg",u._],t.w)
+B.DQ=new A.aL(B.O,["Sony six","image/six.png",u._],t.w)
+B.E0=new A.aL(B.O,["TnT sports","image/tnt.jpg","https://stream.crichd.vip/update/bt1.php"],t.w)
+B.DN=new A.aL(B.O,["Geo super","image/geo.jpg",u._],t.w)
+B.E4=new A.aL(B.O,["Super cricket","image/s.jpg","https://stream.crichd.vip/update/sscricket.php"],t.w)
+B.DK=new A.aL(B.O,["Viaplay sports 1","image/via.jpg","https://stream.crichd.vip/update/premier.php"],t.w)
+B.DX=new A.aL(B.O,["Super sports football","image/ssfootball.png","https://stream.crichd.vip/update/ssfotbal.php"],t.w)
+B.E2=new A.aL(B.O,["Sky box office","image/box.png","https://stream.crichd.vip/update/ch20.php.php"],t.w)
+B.DR=new A.aL(B.O,["Laliga tv","image/laliga.png","https://stream.crichd.vip/update/laligauk.php"],t.w)
+B.DP=new A.aL(B.O,["PTV sports","image/ptv.png","https://stream.crichd.vip/update/ptv.php"],t.w)
+B.DW=new A.aL(B.O,["Euro sports 1","image/euro1.jpg","https://stream.crichd.vip/update/euro1.php"],t.w)
+B.DZ=new A.aL(B.O,["Sky sports F1","image/f1.png","https://stream.crichd.vip/update/skyf1.php"],t.w)
+B.DO=new A.aL(B.O,["Sky sports mix","image/mix.jpg","https://stream.crichd.vip/update/skysmix.php"],t.w)
+B.E3=new A.aL(B.O,["ITV 4 UK","image/i.jpg","https://stream.crichd.vip/update/itv4.php"],t.w)
+B.ef=A.b(s([B.DL,B.DV,B.DM,B.DT,B.DS,B.E_,B.DU,B.DY,B.E1,B.E5,B.DQ,B.E0,B.DN,B.E4,B.DK,B.DX,B.E2,B.DR,B.DP,B.DW,B.DZ,B.DO,B.E3]),A.aa("w<ax<t,t>>"))
 B.kB=A.b(s([0,0,26624,1023,65534,2047,65534,2047]),t.t)
 B.cT=A.b(s([B.bT,B.bp,B.dC,B.dD,B.fh]),t.QP)
 B.BE=A.b(s([137,80,78,71,13,10,26,10]),t.Z)
@@ -70323,7 +70348,7 @@ B.kJ=A.b(s([]),A.aa("w<awE>"))
 B.C_=A.b(s([]),t.E)
 B.BT=A.b(s([]),t.ER)
 B.BV=A.b(s([]),t.tc)
-B.ef=A.b(s([]),t.jl)
+B.eg=A.b(s([]),t.jl)
 B.BX=A.b(s([]),t.fy)
 B.BW=A.b(s([]),A.aa("w<ab9<@>>"))
 B.hm=A.b(s([]),t.AO)
@@ -70380,37 +70405,12 @@ B.y0=new A.nt(0,"auto")
 B.y1=new A.nt(1,"full")
 B.y2=new A.nt(2,"chromium")
 B.C2=A.b(s([B.y0,B.y1,B.y2]),A.aa("w<nt>"))
-B.eg=A.b(s([0,0,24576,1023,65534,34815,65534,18431]),t.t)
+B.eh=A.b(s([0,0,24576,1023,65534,34815,65534,18431]),t.t)
 B.C3=A.b(s([-1,0,0,1,0,0,-1,0,1,0,0,0,-1,1,0,1,1,1,1,0]),t.up)
 B.b4=new A.cW(1,"fuchsia")
 B.b5=new A.cW(3,"linux")
 B.b6=new A.cW(5,"windows")
 B.C4=A.b(s([B.al,B.b4,B.ar,B.b5,B.aU,B.b6]),A.aa("w<cW>"))
-B.O={name:0,image:1,url:2}
-B.DL=new A.aL(B.O,["Sky sports football","image/skyfootball.png","https://stream.crichd.vip/update/skysfotb.php"],t.w)
-B.DV=new A.aL(B.O,["Sky sports","image/sky.png","https://stream.crichd.vip/update/skys2.php"],t.w)
-B.DM=new A.aL(B.O,["Star sports","image/star.jpg","https://stream.crichd.vip/update/star.php"],t.w)
-B.DT=new A.aL(B.O,["Star sports hindi","image/starhindi.jpg","https://stream.crichd.vip/update/star1hi.php"],t.w)
-B.DS=new A.aL(B.O,["Willow criket","image/willow.jpg","https://stream.crichd.vip/update/willowcricket.php"],t.w)
-B.E_=new A.aL(B.O,["Sony espn","image/espn.jpg",u._],t.w)
-B.DU=new A.aL(B.O,["Fox cricket","image/fox.jpg","https://stream.crichd.vip/update/fox501.php"],t.w)
-B.DY=new A.aL(B.O,["Ten 1","image/ten1.png","https://stream.crichd.vip/update/ten1.php"],t.w)
-B.E5=new A.aL(B.O,["Ten sports","image/tens.png","https://stream.crichd.vip/update/tensp.php"],t.w)
-B.E4=new A.aL(B.O,["Spotrs tv1","image/1.jpg",u._],t.w)
-B.DQ=new A.aL(B.O,["Sony six","image/six.png",u._],t.w)
-B.E0=new A.aL(B.O,["TnT sports","image/tnt.jpg","https://stream.crichd.vip/update/bt1.php"],t.w)
-B.DN=new A.aL(B.O,["Geo super","image/geo.jpg",u._],t.w)
-B.E3=new A.aL(B.O,["Super cricket","image/s.jpg","https://stream.crichd.vip/update/sscricket.php"],t.w)
-B.DK=new A.aL(B.O,["Viaplay sports 1","image/via.jpg","https://stream.crichd.vip/update/premier.php"],t.w)
-B.DX=new A.aL(B.O,["Super sports football","image/ssfootball.png","https://stream.crichd.vip/update/ssfotbal.php"],t.w)
-B.E1=new A.aL(B.O,["Sky box office","image/box.png","https://stream.crichd.vip/update/ch20.php.php"],t.w)
-B.DR=new A.aL(B.O,["Laliga tv","image/laliga.png","https://stream.crichd.vip/update/laligauk.php"],t.w)
-B.DP=new A.aL(B.O,["PTV sports","image/ptv.png","https://stream.crichd.vip/update/ptv.php"],t.w)
-B.DW=new A.aL(B.O,["Euro sports 1","image/euro1.jpg","https://stream.crichd.vip/update/euro1.php"],t.w)
-B.DZ=new A.aL(B.O,["Sky sports F1","image/f1.png","https://stream.crichd.vip/update/skyf1.php"],t.w)
-B.DO=new A.aL(B.O,["Sky sports mix","image/mix.jpg","https://stream.crichd.vip/update/skysmix.php"],t.w)
-B.E2=new A.aL(B.O,["ITV 4 UK","image/i.jpg","https://stream.crichd.vip/update/itv4.php"],t.w)
-B.eh=A.b(s([B.DL,B.DV,B.DM,B.DT,B.DS,B.E_,B.DU,B.DY,B.E5,B.E4,B.DQ,B.E0,B.DN,B.E3,B.DK,B.DX,B.E1,B.DR,B.DP,B.DW,B.DZ,B.DO,B.E2]),A.aa("w<ax<t,t>>"))
 B.ho=A.b(s([!0,!1]),t.HZ)
 B.C5=A.b(s([0,0,0,0,1,0,0,0,0,1,0,0,0,0,1,0,0,0,1,0]),t.up)
 B.hp=A.b(s([0,0,65498,45055,65535,34815,65534,18431]),t.t)
