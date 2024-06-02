@@ -1,5 +1,4 @@
 import 'dart:ui_web' as ui;
-
 import 'package:flutter/material.dart';
 import 'package:universal_html/html.dart';
 
@@ -20,7 +19,7 @@ class ChannelProvider extends ChangeNotifier {
   }) async {
     channelName = channelname;
     channelUrl = channelurl;
-   
+
     notifyListeners();
   }
 
@@ -29,7 +28,7 @@ class ChannelProvider extends ChangeNotifier {
     _iFrameElement.style.width = '100%';
     _iFrameElement.style.overflow = 'hidden'; // Hide the scroll
     _iFrameElement.style.border = 'none';
- _iFrameElement.src = channelUrl;
+    _iFrameElement.src = channelUrl;
     debugPrint("url $channelUrl");
 
 // ignore: undefined_prefixed_name
