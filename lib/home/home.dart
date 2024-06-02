@@ -42,22 +42,20 @@ class _HomeState extends State<Home> {
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Center(
-                    child: Padding(
+                Padding(
                   padding: const EdgeInsets.only(top: 20, bottom: 20),
                   child: Text(
                     "Live Tv Channels Online Free Free Free",
                     style: mytextStyle!.copyWith(fontSize: 25),
                   ),
-                )),
+                ),
                 Category(
                     mQ: mQ,
                     primaryColor: primaryColor,
                     mytextStyle: mytextStyle),
-                Center(
-                    child: Padding(
+                Padding(
                   padding: const EdgeInsets.only(top: 20, bottom: 20),
                   child: Center(
                     child: Text(
@@ -65,10 +63,9 @@ class _HomeState extends State<Home> {
                       style: mytextStyle.copyWith(fontSize: 14),
                     ),
                   ),
-                )),
+                ),
                 SizedBox(
                   width: double.infinity,
-
                   child: GridView.builder(
                       shrinkWrap: true,
                       physics: const ScrollPhysics(
@@ -91,14 +88,10 @@ class _HomeState extends State<Home> {
                               Play.routeName,
                             );
                           },
-                          child: SizedBox(
-                            height: 145,
-                            width: 135,
-                            child: ListItems(
-                                mytextStyle: mytextStyle,
-                                channelName: channelList[index]['name']!,
-                                imageUrl: channelList[index]['image']!),
-                          ),
+                          child: ListItems(
+                              mytextStyle: mytextStyle,
+                              channelName: channelList[index]['name']!,
+                              imageUrl: channelList[index]['image']!),
                         );
                       }),
                 ),

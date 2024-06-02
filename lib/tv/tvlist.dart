@@ -15,24 +15,26 @@ class ListItems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 145,
+      height: 140,
       width: 135,
       decoration: boxDecoration,
       child: Center(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset(
-            imageUrl,
-            fit: BoxFit.cover,
-            height: 130,
-          ),
-          const SizedBox(
-            height: 5,
-          ),
-          Text(channelName, style: mytextStyle!.copyWith(fontSize: 14)),
-        ],
-      )),
+        child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+        Image.asset(
+          imageUrl,
+          fit: BoxFit.cover,
+          height: 130,
+        ),
+        const SizedBox(
+          height: 5,
+        ),
+        Text(channelName, style: mytextStyle!.copyWith(fontSize: 14)),
+                ],
+              ),
+      ),
     );
   }
 }

@@ -33,18 +33,16 @@ class Play extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Center(
-                    child: Padding(
+                Padding(
                   padding: const EdgeInsets.only(top: 20, bottom: 20),
                   child: Text(
                     "Live Tv Channels Online Free Free Free",
                     style: mytextStyle!.copyWith(fontSize: 25),
                   ),
-                )),
-                Center(
-                    child: Padding(
+                ),
+                Padding(
                   padding: const EdgeInsets.only(top: 20, bottom: 20),
                   child: Center(
                     child: Text(
@@ -52,9 +50,8 @@ class Play extends StatelessWidget {
                       style: mytextStyle.copyWith(fontSize: 14),
                     ),
                   ),
-                )),
-                Center(
-                    child: Padding(
+                ),
+                Padding(
                   padding: const EdgeInsets.only(top: 20, bottom: 20),
                   child: Center(
                     child: Text(
@@ -65,9 +62,8 @@ class Play extends StatelessWidget {
                           color: primaryColor),
                     ),
                   ),
-                )),
-                Center(
-                    child: Padding(
+                ),
+                Padding(
                   padding: const EdgeInsets.only(top: 20, bottom: 20),
                   child: Center(
                     child: Text(
@@ -75,8 +71,8 @@ class Play extends StatelessWidget {
                       style: mytextStyle.copyWith(fontSize: 14),
                     ),
                   ),
-                )),
-                const Center(child: IframeScreen()),
+                ),
+                const IframeScreen(),
                 Footer(mytextStyle: mytextStyle),
                 const SizedBox(
                   height: 20,
