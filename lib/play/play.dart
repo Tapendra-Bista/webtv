@@ -63,6 +63,16 @@ class _PlayState extends State<Play> {
                   padding: const EdgeInsets.only(top: 20, bottom: 20),
                   child: Center(
                     child: Text(
+                      "Note: Please don't reload page ,it may be crashed due to non use of backend and go to home page to change channel.",
+                      style: mytextStyle.copyWith(fontSize: 10,fontWeight: FontWeight.w700,color:primaryColor),
+                    ),
+                  ),
+                )),
+                Center(
+                    child: Padding(
+                  padding: const EdgeInsets.only(top: 20, bottom: 20),
+                  child: Center(
+                    child: Text(
                       "Your are watching ${context.watch<ChannelNameProvider>().channelName} now !!!",
                       style: mytextStyle.copyWith(fontSize: 14),
                     ),

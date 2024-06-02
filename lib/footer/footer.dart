@@ -11,6 +11,7 @@ class Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+        var primaryColor = Theme.of(context).primaryColor;
     return Container(
       height: 160,
       width: double.infinity,
@@ -21,15 +22,15 @@ class Footer extends StatelessWidget {
             text: TextSpan(
                 text: "DISCLAIMER :",
                 style: mytextStyle!.copyWith(
-                  color: Colors.black,
+                  color: primaryColor,
                   decoration: TextDecoration.underline,
-                  decorationColor: Colors.black,
+                  decorationColor:primaryColor,
                 ),
                 children: [
               TextSpan(
                   text:
                       "\nIt is our policy to respond to clear notices of alleged copyright infringement. If you are a copyright owner or an agent thereof, and you believe that any content hosted on our web site (mobileTv) infringes your copyrights, then you may submit a notification for us in email (tapendrabista01@gmail.com)",
-                  style: mytextStyle!.copyWith(fontSize:15, color: Colors.black))
+                  style: mytextStyle!.copyWith(fontSize:15, color:primaryColor))
             ])),
       ),
     );
