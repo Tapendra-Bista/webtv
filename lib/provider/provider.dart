@@ -24,8 +24,8 @@ class ChannelProvider extends ChangeNotifier {
   }
 
   void provideTv() async {
-    _iFrameElement.style.height = '75%';
-    _iFrameElement.style.width = '100%';
+    _iFrameElement.style.height = '70%';
+    _iFrameElement.style.width = '90%';
     _iFrameElement.style.overflow = 'hidden'; // Hide the scroll
     _iFrameElement.style.border = 'none';
     _iFrameElement.src = channelUrl;
