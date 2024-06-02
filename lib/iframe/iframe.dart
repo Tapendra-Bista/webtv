@@ -7,12 +7,14 @@ class IframeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+ var provider =  context.watch<ToChangeChannelProvider>();
+ provider.provideTv();
     return Column(
       children: [
         SizedBox(
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
-            child: context.watch<ToChangeChannelProvider>().widget),
+            child:provider.widget),
       ],
     );
   }

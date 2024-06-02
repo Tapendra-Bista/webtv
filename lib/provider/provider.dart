@@ -31,10 +31,15 @@ class ToChangeChannelProvider extends ChangeNotifier {
   void provideUrl({
     required String newUrl,
   }) async {
-    channelUrl = newUrl;
-    _iFrameElement.style.height = '90%';
-    _iFrameElement.style.width = '100%';
+    channelUrl = newUrl; 
 
+
+    notifyListeners();
+  }
+
+   void provideTv () async{
+   _iFrameElement.style.height = '90%';
+    _iFrameElement.style.width = '100%';
     _iFrameElement.allowFullscreen = true;
     _iFrameElement.style.overflow = 'hidden'; // Hide the scroll
     _iFrameElement.style.border = 'none';
@@ -46,6 +51,7 @@ class ToChangeChannelProvider extends ChangeNotifier {
       (int viewId) => _iFrameElement,
     );
     widget = HtmlElementView(viewType: 'iframeElement', key: UniqueKey());
-    notifyListeners();
-  }
+     notifyListeners();
+    }
+    
 }
