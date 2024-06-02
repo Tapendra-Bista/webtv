@@ -68,15 +68,9 @@ class _HomeState extends State<Home> {
                 )),
                 SizedBox(
                   width: double.infinity,
-                  height: mQ.width *
-                      (channelList.length + itemNumber) /
-                      (itemNumber == 5
-                              ? itemNumber * 4.4
-                              : itemNumber == 2
-                                  ? itemNumber * 2
-                                  : itemNumber * 2.8)
-                          .toDouble(),
+
                   child: GridView.builder(
+                      shrinkWrap: true,
                       physics: const ScrollPhysics(
                           parent: NeverScrollableScrollPhysics()),
                       itemCount: channelList.length,
@@ -88,7 +82,6 @@ class _HomeState extends State<Home> {
                       itemBuilder: (BuildContext context, int index) {
                         return GestureDetector(
                           onTap: () {
-                            
                             context.read<ChannelProvider>().updated(
                                 channelurl: channelList[index]['url']!,
                                 channelname: channelList[index]['name']!);
@@ -98,15 +91,19 @@ class _HomeState extends State<Home> {
                               Play.routeName,
                             );
                           },
-                          child: ListItems(
-                              mytextStyle: mytextStyle,
-                              channelName: channelList[index]['name']!,
-                              imageUrl: channelList[index]['image']!),
+                          child: SizedBox(
+                            height: 145,
+                            width: 135,
+                            child: ListItems(
+                                mytextStyle: mytextStyle,
+                                channelName: channelList[index]['name']!,
+                                imageUrl: channelList[index]['image']!),
+                          ),
                         );
                       }),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 30,
                 ),
                 Footer(mytextStyle: mytextStyle),
                 const SizedBox(

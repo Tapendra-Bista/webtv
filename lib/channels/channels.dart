@@ -89,5 +89,16 @@ const List<Map<String, String>> channelList = [
     'image': "image/ptv.png",
     'url': 'https://stream.crichd.vip/update/ptv.php',
   },
+
+    {
+    'name': "Euro sports 1",
+    'image': "image/euro1.jpg",
+    'url': 'https://stream.crichd.vip/update/euro1.php',
+  },
+    {
+    'name': "Sky sports F1",
+    'image': "image/f1.png",
+    'url': 'https://stream.crichd.vip/update/skyf1.php',
+  },
 ];
 

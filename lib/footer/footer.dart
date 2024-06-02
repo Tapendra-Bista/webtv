@@ -13,7 +13,7 @@ class Footer extends StatelessWidget {
   Widget build(BuildContext context) {
         var primaryColor = Theme.of(context).primaryColor;
     return Container(
-      height: 160,
+     
       width: double.infinity,
       decoration: boxDecoration,
       child: Padding(
