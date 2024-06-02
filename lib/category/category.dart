@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mobiletv/decoration/btnstyle.dart';
-import 'package:mobiletv/home/home.dart';
+import 'package:webtv/decoration/btnstyle.dart';
+import 'package:webtv/home/home.dart';
 
 class Category extends StatelessWidget {
   const Category({

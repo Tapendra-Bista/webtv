@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mobiletv/footer/footer.dart';
-import 'package:mobiletv/iframe/iframe.dart';
-import 'package:mobiletv/provider/provider.dart';
 import 'package:provider/provider.dart';
+import 'package:webtv/footer/footer.dart';
+import 'package:webtv/iframe/iframe.dart';
+import 'package:webtv/provider/provider.dart';
 
 class Play extends StatelessWidget {
   static const routeName = "/Play";
@@ -15,13 +15,21 @@ class Play extends StatelessWidget {
     var mytextStyle = Theme.of(context).textTheme.headlineMedium;
     var primaryColor = Theme.of(context).primaryColor;
     context.watch<ChannelProvider>().provideTv();
+      var mQ = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
+          leadingWidth:mQ.width*0.2,
+       leading: Align(
+          alignment: Alignment.bottomLeft,
+          child: Container(
+            height:100,
+            color:Colors.white,
+            child: Image.asset("image/tv.png",))),
         automaticallyImplyLeading: false,
         centerTitle: true,
         backgroundColor: primaryColor,
         title: Text(context.watch<ChannelProvider>().channelName!,
-            style: mytextStyle),
+            style: mytextStyle!.copyWith(color:Colors.white,fontWeight: FontWeight.normal,fontSize:30)),
       ),
       body: NotificationListener<OverscrollIndicatorNotification>(
         onNotification: (notification) {
@@ -39,14 +47,14 @@ class Play extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 20, bottom: 20),
                   child: Text(
                     "Live Tv Channels Online Free Free Free",
-                    style: mytextStyle!.copyWith(fontSize: 25),
+                    style: mytextStyle.copyWith(fontSize: 25),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 20, bottom: 20),
                   child: Center(
                     child: Text(
-                      "Watch Live Sports Tv Streaming online. Watch live sports football, cricket, and all popular live sports tv channels online free from mobileTv.",
+                      "Watch Live Sports Tv Streaming online. Watch live sports football, cricket, and all popular live sports tv channels online free from webtv.",
                       style: mytextStyle.copyWith(fontSize: 14),
                     ),
                   ),

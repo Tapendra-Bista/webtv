@@ -1,6 +1,6 @@
 {
-    "name": "mobiletv",
-    "short_name": "mobiletv",
+    "name": "webtv",
+    "short_name": "webtv",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

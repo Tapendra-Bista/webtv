@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobiletv/provider/provider.dart';
+import 'package:webtv/provider/provider.dart';
 import 'package:provider/provider.dart';
 
 class IframeScreen extends StatelessWidget {

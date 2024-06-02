@@ -1,9 +1,9 @@
-import 'package:mobiletv/home/home.dart';
-import 'package:mobiletv/play/play.dart';
+import 'package:webtv/home/home.dart';
+import 'package:webtv/play/play.dart';
 
 var routes = {
   Home.routeName: (context) => const Home(
-        appbarName: "Mobile Tv",
+        appbarName: "",
       ),
   Play.routeName: (contex) => const Play(),
 };

@@ -82,7 +82,7 @@ const List<Map<String, String>> channelList = [
  {
     'name': "Sky box office",
     'image': "image/box.png",
-    'url': 'https://stream.crichd.vip/update/ch20.php.php',
+    'url': 'https://stream.crichd.vip/update/ch20.php',
   },
 
 

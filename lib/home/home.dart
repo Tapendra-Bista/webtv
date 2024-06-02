@@ -1,13 +1,13 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:mobiletv/category/category.dart';
-import 'package:mobiletv/channels/channels.dart';
-import 'package:mobiletv/footer/footer.dart';
-import 'package:mobiletv/play/play.dart';
-import 'package:mobiletv/provider/provider.dart';
-import 'package:mobiletv/tv/tvlist.dart';
 import 'package:provider/provider.dart';
+import 'package:webtv/category/category.dart';
+import 'package:webtv/channels/channels.dart';
+import 'package:webtv/footer/footer.dart';
+import 'package:webtv/play/play.dart';
+import 'package:webtv/provider/provider.dart';
+import 'package:webtv/tv/tvlist.dart';
 
 class Home extends StatefulWidget {
   static const routeName = "/home";
@@ -27,10 +27,17 @@ class _HomeState extends State<Home> {
 
     return Scaffold(
       appBar: AppBar(
+        leadingWidth:mQ.width*0.2,
+        leading: Align(
+          alignment: Alignment.bottomLeft,
+          child: Container(
+            height:100,
+            color:Colors.white,
+            child: Image.asset("image/tv.png",))),
         automaticallyImplyLeading: false,
         centerTitle: true,
         backgroundColor: primaryColor,
-        title: Text(widget.appbarName, style: mytextStyle),
+        title: Text(widget.appbarName, style: mytextStyle!.copyWith(color:Colors.white,fontWeight: FontWeight.normal,fontSize:30)),
       ),
       body: NotificationListener<OverscrollIndicatorNotification>(
         onNotification: (notification) {
@@ -48,7 +55,7 @@ class _HomeState extends State<Home> {
                   padding: const EdgeInsets.only(top: 20, bottom: 20),
                   child: Text(
                     "Live Tv Channels Online Free Free Free",
-                    style: mytextStyle!.copyWith(fontSize: 25),
+                    style: mytextStyle.copyWith(fontSize: 25),
                   ),
                 ),
                 Category(
@@ -59,7 +66,7 @@ class _HomeState extends State<Home> {
                   padding: const EdgeInsets.only(top: 20, bottom: 20),
                   child: Center(
                     child: Text(
-                      "Watch Live Sports Tv Streaming online. Watch live sports football, cricket, and all popular live sports tv channels online free from mobileTv.",
+                      "Watch Live Sports Tv Streaming online. Watch live sports football, cricket, and all popular live sports tv channels online free from webtv.",
                       style: mytextStyle.copyWith(fontSize: 14),
                     ),
                   ),

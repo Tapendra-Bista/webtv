@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mobiletv/home/home.dart';
-import 'package:mobiletv/provider/provider.dart';
-import 'package:mobiletv/routes/routes.dart';
-import 'package:mobiletv/theme/theme.dart';
+import 'package:webtv/home/home.dart';
+import 'package:webtv/provider/provider.dart';
+import 'package:webtv/routes/routes.dart';
+import 'package:webtv/theme/theme.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'mobiletv',
+        title: 'webtv',
         theme: myThemeData,
         routes: routes,
         initialRoute: Home.routeName,

@@ -1,4 +1,4 @@
-package com.example.mobiletv
+package com.example.webtv
 
 import io.flutter.embedding.android.FlutterActivity
 

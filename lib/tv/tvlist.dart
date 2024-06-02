@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobiletv/decoration/boxdecoration.dart';
+import 'package:webtv/decoration/boxdecoration.dart';
 
 class ListItems extends StatelessWidget {
   const ListItems({
