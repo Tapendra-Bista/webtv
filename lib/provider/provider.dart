@@ -4,54 +4,55 @@ import 'package:flutter/material.dart';
 import 'package:universal_html/html.dart';
 
 // model
-class ChannelNameProvider extends ChangeNotifier {
+class ChannelProvider extends ChangeNotifier {
   String? channelName;
-  ChannelNameProvider({
-    this.channelName = "Ptv sports",
-  });
-
-  void updatedName({
-    required String channelname,
-  }) async {
-    channelName = channelname;
-    notifyListeners();
-  }
-}
-
-class ToChangeChannelProvider extends ChangeNotifier {
-  final IFrameElement _iFrameElement = IFrameElement();
   Widget? widget;
-
+  final IFrameElement _iFrameElement = IFrameElement();
   String? channelUrl;
-
-  ToChangeChannelProvider({
+  ChannelProvider({
+    this.channelName = "Ptv sports",
     this.channelUrl = 'https://stream.crichd.vip/update/ptv.php',
   });
 
-  void provideUrl({
-    required String newUrl,
+  void updated({
+    required String channelname,
+    required String channelurl,
   }) async {
-    channelUrl = newUrl; 
-
-
+    channelName = channelname;
+    channelUrl = channelurl;
+   
     notifyListeners();
   }
 
-   void provideTv () async{
-   _iFrameElement.style.height = '90%';
+  void provideTv() async {
+    _iFrameElement.style.height = '90%';
     _iFrameElement.style.width = '100%';
-    _iFrameElement.allowFullscreen = true;
     _iFrameElement.style.overflow = 'hidden'; // Hide the scroll
     _iFrameElement.style.border = 'none';
-    _iFrameElement.src = channelUrl;
+ _iFrameElement.src = channelUrl;
     debugPrint("url $channelUrl");
-    // ignore: undefined_prefixed_name
+
+// ignore: undefined_prefixed_name
     ui.platformViewRegistry.registerViewFactory(
       'iframeElement',
       (int viewId) => _iFrameElement,
     );
-    widget = HtmlElementView(viewType: 'iframeElement', key: UniqueKey());
-     notifyListeners();
-    }
-    
+
+    widget = HtmlElementView(
+      viewType: 'iframeElement',
+      key: UniqueKey(),
+    );
+
+    _iFrameElement.allowFullscreen = true;
+    _iFrameElement.onFullscreenChange.listen((event) {
+      // Handle fullscreen change event (optional)
+      debugPrint("Iframe entered/exited fullscreen mode");
+    });
+
+    _iFrameElement.onFullscreenError.listen((event) {
+      // Handle fullscreen error (optional)
+      debugPrint("Error entering fullscreen mode for iframe");
+    });
+    notifyListeners();
+  }
 }

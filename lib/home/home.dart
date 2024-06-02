@@ -1,4 +1,5 @@
 import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:mobiletv/category/category.dart';
 import 'package:mobiletv/channels/channels.dart';
@@ -87,11 +88,11 @@ class _HomeState extends State<Home> {
                       itemBuilder: (BuildContext context, int index) {
                         return GestureDetector(
                           onTap: () {
-                            context.read<ChannelNameProvider>().updatedName(
+                            
+                            context.read<ChannelProvider>().updated(
+                                channelurl: channelList[index]['url']!,
                                 channelname: channelList[index]['name']!);
-                            context
-                                .read<ToChangeChannelProvider>()
-                                .provideUrl(newUrl: channelList[index]['url']!);
+
                             Navigator.pushNamed(
                               context,
                               Play.routeName,

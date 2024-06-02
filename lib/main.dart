@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create:(context)=>ChannelNameProvider ()),
-        ChangeNotifierProvider(create: (context)=> ToChangeChannelProvider()),
+        ChangeNotifierProvider(create:(context)=>ChannelProvider ()),
+       
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

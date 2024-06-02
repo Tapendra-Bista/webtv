@@ -4,28 +4,23 @@ import 'package:mobiletv/iframe/iframe.dart';
 import 'package:mobiletv/provider/provider.dart';
 import 'package:provider/provider.dart';
 
-class Play extends StatefulWidget {
+class Play extends StatelessWidget {
   static const routeName = "/Play";
   const Play({
     super.key,
   });
 
   @override
-  State<Play> createState() => _PlayState();
-}
-
-class _PlayState extends State<Play> {
-  @override
   Widget build(BuildContext context) {
     var mytextStyle = Theme.of(context).textTheme.headlineMedium;
     var primaryColor = Theme.of(context).primaryColor;
-
+    context.watch<ChannelProvider>().provideTv();
     return Scaffold(
       appBar: AppBar(
-         automaticallyImplyLeading: false,
+        automaticallyImplyLeading: false,
         centerTitle: true,
         backgroundColor: primaryColor,
-        title: Text(context.watch<ChannelNameProvider>().channelName!,
+        title: Text(context.watch<ChannelProvider>().channelName!,
             style: mytextStyle),
       ),
       body: NotificationListener<OverscrollIndicatorNotification>(
@@ -63,8 +58,11 @@ class _PlayState extends State<Play> {
                   padding: const EdgeInsets.only(top: 20, bottom: 20),
                   child: Center(
                     child: Text(
-                      "Note: Please don't reload page ,it may be crashed due to non use of backend and go to home page to change channel.",
-                      style: mytextStyle.copyWith(fontSize: 10,fontWeight: FontWeight.w700,color:primaryColor),
+                      "Note: Please don't reload page , it may be crashed due to non use of backend and go to home page to change channel.",
+                      style: mytextStyle.copyWith(
+                          fontSize: 10,
+                          fontWeight: FontWeight.w700,
+                          color: primaryColor),
                     ),
                   ),
                 )),
@@ -73,13 +71,12 @@ class _PlayState extends State<Play> {
                   padding: const EdgeInsets.only(top: 20, bottom: 20),
                   child: Center(
                     child: Text(
-                      "Your are watching ${context.watch<ChannelNameProvider>().channelName} now !!!",
+                      "Your are watching ${context.watch<ChannelProvider>().channelName} now !!!",
                       style: mytextStyle.copyWith(fontSize: 14),
                     ),
                   ),
                 )),
-                const Scrollbar(
-                    thickness: 0, child: Center(child: IframeScreen())),
+                const Center(child: IframeScreen()),
                 Footer(mytextStyle: mytextStyle),
                 const SizedBox(
                   height: 20,
