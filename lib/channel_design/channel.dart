@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:webtv/decoration/boxdecoration.dart';
 
-class ListItems extends StatelessWidget {
-  const ListItems({
+class Channel extends StatelessWidget { // channel design 
+  const Channel({
     super.key,
     required this.mytextStyle,
     required this.channelName,

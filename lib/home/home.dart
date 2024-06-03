@@ -1,14 +1,13 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:webtv/category/category.dart';
-import 'package:webtv/channels/channels.dart';
+import 'package:webtv/channels_url/channels_url.dart';
 import 'package:webtv/decoration/myappbar.dart';
 import 'package:webtv/footer/footer.dart';
 import 'package:webtv/play/play.dart';
 import 'package:webtv/provider/provider.dart';
-import 'package:webtv/tv/tvlist.dart';
+import 'package:webtv/channel_design/channel.dart';
 
 class Home extends StatefulWidget {
   static const routeName = "/home";
@@ -21,13 +20,13 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    var mytextStyle = Theme.of(context).textTheme.headlineMedium;
-    var primaryColor = Theme.of(context).primaryColor;
-    var mQ = MediaQuery.of(context).size;
-    var itemNumber = min(5, (mQ.width / 200).toInt());
+    var mytextStyle = Theme.of(context).textTheme.headlineMedium; // calling text theme
+    var primaryColor = Theme.of(context).primaryColor; // calling primary color
+    var mediaQuery = MediaQuery.of(context).size; // mediaQuery for responsive 
+    var itemNumber = min(5, (mediaQuery.width / 200).toInt());
 
     return Scaffold(
-      appBar: myAppBar(context, widget.appbarName),
+      appBar: myAppBar(context, widget.appbarName), // calling custom appbar
       body: NotificationListener<OverscrollIndicatorNotification>(
         onNotification: (notification) {
           notification.disallowIndicator();
@@ -48,7 +47,7 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 Category(
-                    mQ: mQ,
+                    mediaQuery: mediaQuery,
                     primaryColor: primaryColor,
                     mytextStyle: mytextStyle),
                 Padding(
@@ -62,7 +61,7 @@ class _HomeState extends State<Home> {
                 ),
                 SizedBox(
                   width: double.infinity,
-                  child: GridView.builder(
+                  child: GridView.builder( // for channel list
                       shrinkWrap: true,
                       physics: const ScrollPhysics(
                           parent: NeverScrollableScrollPhysics()),
@@ -84,7 +83,7 @@ class _HomeState extends State<Home> {
                               Play.routeName,
                             );
                           },
-                          child: ListItems(
+                          child: Channel( // channel property imageurl,imagename
                               mytextStyle: mytextStyle,
                               channelName: channelList[index]['name']!,
                               imageUrl: channelList[index]['image']!),
@@ -94,7 +93,7 @@ class _HomeState extends State<Home> {
                 const SizedBox(
                   height: 30,
                 ),
-                Footer(mytextStyle: mytextStyle),
+                Footer(mytextStyle: mytextStyle), // calling desclaimer
                 const SizedBox(
                   height: 20,
                 )

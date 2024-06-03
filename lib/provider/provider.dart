@@ -1,4 +1,5 @@
 import 'dart:ui_web' as ui;
+
 import 'package:flutter/material.dart';
 import 'package:universal_html/html.dart';
 
@@ -13,7 +14,7 @@ class ChannelProvider extends ChangeNotifier {
     this.channelUrl = 'https://stream.crichd.vip/update/ptv.php',
   });
 
-  void updated({
+  void updated({ // function to get  update name,url from list
     required String channelname,
     required String channelurl,
   }) async {
@@ -23,14 +24,13 @@ class ChannelProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void provideTv() async {
+  void provideTv() async { // function for stream build
     _iFrameElement.style.height = '80%';
     _iFrameElement.style.width = '100%';
     _iFrameElement.style.overflow = 'hidden'; // Hide the scroll
     _iFrameElement.style.border = 'none';
     _iFrameElement.src = channelUrl;
- _iFrameElement.allowFullscreen = true;
- debugPrint(channelUrl);
+    debugPrint(channelUrl);
     ui.platformViewRegistry.registerViewFactory(
       'iframeElement',
       (int viewId) => _iFrameElement,
@@ -41,8 +41,17 @@ class ChannelProvider extends ChangeNotifier {
       key: UniqueKey(),
     );
 
-   
 
+    _iFrameElement.onFullscreenChange.listen((data) {
+      debugPrint("checked condition  of fullscreen: $data");
+    });
+    _iFrameElement.onFullscreenError.listen((data) {
+      debugPrint("checked condition of error while doing fullscreen: $data");
+    });
+    _iFrameElement.onError.listen((data) {
+      debugPrint("checked condition of stream error : $data");
+    });
     notifyListeners();
+        _iFrameElement.allowFullscreen = true;
   }
 }

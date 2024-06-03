@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 AppBar myAppBar(context,String title){
 
-return  AppBar(
+return  AppBar(  // appbar with custom design
           leadingWidth:MediaQuery.of(context).size.width*0.2,
        leading: Align(
           alignment: Alignment.bottomLeft,

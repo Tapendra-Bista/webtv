@@ -13,9 +13,9 @@ class Play extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var mytextStyle = Theme.of(context).textTheme.headlineMedium;
-    var primaryColor = Theme.of(context).primaryColor;
-    context.watch<ChannelProvider>().provideTv();
+    var mytextStyle =
+        Theme.of(context).textTheme.headlineMedium; // calling text theme
+    var primaryColor = Theme.of(context).primaryColor; // calling primary color
 
     return Scaffold(
       appBar: myAppBar(context, context.watch<ChannelProvider>().channelName!),
@@ -62,14 +62,17 @@ class Play extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 20, bottom: 20),
                   child: Center(
-                    child: Text(
-                      "Your are watching ${context.watch<ChannelProvider>().channelName} now !!!",
-                      style: mytextStyle.copyWith(fontSize: 14),
+                    child: Consumer<ChannelProvider>(
+                      // watch provider or to get data from provider
+                      builder: (context, value, child) => Text(
+                        "Your are watching ${value.channelName} now !!!",
+                        style: mytextStyle.copyWith(fontSize: 14),
+                      ),
                     ),
                   ),
                 ),
-                const IframeScreen(),
-                Footer(mytextStyle: mytextStyle),
+                const IframeScreen(), // calling to show stream part
+                Footer(mytextStyle: mytextStyle), // calling disclaimer
                 const SizedBox(
                   height: 20,
                 )

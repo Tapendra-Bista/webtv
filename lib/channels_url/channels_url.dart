@@ -1,4 +1,4 @@
-const List<Map<String, String>> channelList = [
+const List<Map<String, String>> channelList = [ // Url,image and name of channel
   {
     'name': "Sky sports football",
     'image': "image/skyfootball.png",

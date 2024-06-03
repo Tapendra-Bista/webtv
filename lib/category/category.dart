@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:webtv/decoration/btnstyle.dart';
 import 'package:webtv/home/home.dart';
 
-class Category extends StatelessWidget {
+class Category extends StatelessWidget { // top part which distinguish app sport,cricket and football
   const Category({
     super.key,
-    required this.mQ,
+    required this.mediaQuery,
     required this.primaryColor,
     required this.mytextStyle,
   });
 
-  final Size mQ;
+  final Size mediaQuery;
   final Color primaryColor;
   final TextStyle? mytextStyle;
 
@@ -20,7 +20,7 @@ class Category extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         SizedBox(
-          width: mQ.width * 0.3,
+          width: mediaQuery.width * 0.3,
           height: 30,
           child: FittedBox(
             child: TextButton.icon(
@@ -40,7 +40,7 @@ class Category extends StatelessWidget {
           ),
         ),
         SizedBox(
-          width: mQ.width * 0.3,
+          width: mediaQuery.width * 0.3,
           height: 30,
           child: FittedBox(
             child: TextButton.icon(
@@ -60,7 +60,7 @@ class Category extends StatelessWidget {
           ),
         ),
         SizedBox(
-          width: mQ.width * 0.3,
+          width: mediaQuery.width * 0.3,
           height: 30,
           child: FittedBox(
             child: TextButton.icon(

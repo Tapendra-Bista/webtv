@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:webtv/decoration/boxdecoration.dart';
 
-class Footer extends StatelessWidget {
+class Footer extends StatelessWidget {  // bottom part or footer about disclaimer
   const Footer({
     super.key,
     required this.mytextStyle,
