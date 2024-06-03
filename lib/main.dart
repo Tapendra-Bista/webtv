@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:webtv/home/home.dart';
+import 'package:provider/provider.dart';
 import 'package:webtv/provider/provider.dart';
 import 'package:webtv/routes/routes.dart';
 import 'package:webtv/theme/theme.dart';
-import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,14 +16,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create:(context)=>ChannelProvider ()),       
+        ChangeNotifierProvider(create: (context) => ChannelProvider()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'webtv',
         theme: myThemeData,
-        routes: routes,
-        initialRoute: Home.routeName,
+        onGenerateRoute: routes,
       ),
     );
   }

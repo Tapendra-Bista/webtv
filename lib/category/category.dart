@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:webtv/all_sports/all_sports.dart';
+import 'package:webtv/cricket/cricket.dart';
 import 'package:webtv/decoration/btnstyle.dart';
-import 'package:webtv/home/home.dart';
+import 'package:webtv/football/football.dart';
 
-class Category extends StatelessWidget { // top part which distinguish app sport,cricket and football
+class Category extends StatelessWidget {
+  // top part which distinguish app sport,cricket and football
   const Category({
     super.key,
     required this.mediaQuery,
@@ -30,11 +33,7 @@ class Category extends StatelessWidget { // top part which distinguish app sport
                 ),
                 style: buttonStyle,
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              const Home(appbarName: "All Sports")));
+                  Navigator.pushNamed(context, AllSports.routeName);
                 },
                 label: Text("All Sports", style: mytextStyle)),
           ),
@@ -50,11 +49,7 @@ class Category extends StatelessWidget { // top part which distinguish app sport
                 ),
                 style: buttonStyle,
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              const Home(appbarName: "Cricket")));
+                  Navigator.pushNamed(context, Cricket.routeName);
                 },
                 label: Text("Cricket", style: mytextStyle)),
           ),
@@ -70,11 +65,7 @@ class Category extends StatelessWidget { // top part which distinguish app sport
                 ),
                 style: buttonStyle,
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              const Home(appbarName: "Football")));
+                  Navigator.pushNamed(context, Football.routeName);
                 },
                 label: Text("Football", style: mytextStyle)),
           ),

@@ -1,36 +1,38 @@
-const List<Map<String, String>> channelList = [ // Url,image and name of channel
+// all channels
+const List<Map<String, String>> channelList = [
+  // Url,image and name of channel
   {
-    'name': "Sky sports football",
+    'name': "Sky Sports Football",
     'image': "image/skyfootball.png",
     'url': 'https://stream.crichd.vip/update/skysfotb.php',
   },
   {
-    'name': "Sky sports",
+    'name': "Sky Sports",
     'image': "image/sky.png",
     'url': 'https://stream.crichd.vip/update/skys2.php',
   },
   {
-    'name': "Star sports",
+    'name': "Star Sports",
     'image': "image/star.jpg",
     'url': 'https://stream.crichd.vip/update/star.php',
   },
   {
-    'name': "Star sports hindi",
+    'name': "Star Sports Hindi",
     'image': "image/starhindi.jpg",
     'url': 'https://stream.crichd.vip/update/star1hi.php',
   },
   {
-    'name': "Willow criket",
+    'name': "Willow Criket",
     'image': "image/willow.jpg",
     'url': 'https://stream.crichd.vip/update/willowcricket.php',
   },
   {
-    'name': "Sony espn",
+    'name': "Sony Espn",
     'image': "image/espn.jpg",
     'url': 'https://stream.crichd.vip/update/espnus.php',
   },
   {
-    'name': "Fox cricket",
+    'name': "Fox Cricket",
     'image': "image/fox.jpg",
     'url': 'https://stream.crichd.vip/update/fox501.php',
   },
@@ -40,83 +42,192 @@ const List<Map<String, String>> channelList = [ // Url,image and name of channel
     'url': 'https://stream.crichd.vip/update/ten1.php',
   },
   {
-    'name': "Ten sports",
+    'name': "Ten Sports",
     'image': "image/ts.jpg",
     'url': 'https://stream.crichd.vip/update/tensp.php',
   },
   {
-    'name': "Spotrs tv1",
+    'name': "Spotrs Tv1",
     'image': "image/1.jpg",
     'url': 'https://stream.crichd.vip/update/espnus.php',
   },
   {
-    'name': "Sony six",
+    'name': "Sony Six",
     'image': "image/six.png",
     'url': 'https://stream.crichd.vip/update/espnus.php',
   },
   {
-    'name': "TnT sports",
+    'name': "TnT Sports",
     'image': "image/tnt.jpg",
     'url': 'https://stream.crichd.vip/update/bt1.php',
   },
   {
-    'name': "Geo super",
+    'name': "Geo Super",
     'image': "image/geo.jpg",
     'url': 'https://stream.crichd.vip/update/espnus.php',
   },
   {
-    'name': "Super cricket",
+    'name': "Super Sricket",
     'image': "image/s.jpg",
     'url': 'https://stream.crichd.vip/update/sscricket.php',
   },
   {
-    'name': "Viaplay sports 1",
+    'name': "Viaplay Sports 1",
     'image': "image/via.jpg",
     'url': 'https://stream.crichd.vip/update/premier.php',
   },
-   {
-    'name': "Super sports football",
+  {
+    'name': "Super Sports Football",
     'image': "image/ssfootball.png",
     'url': 'https://stream.crichd.vip/update/ssfotbal.php',
   },
- {
-    'name': "Sky box office",
+  {
+    'name': "Sky Box Office",
     'image': "image/box.png",
     'url': 'https://stream.crichd.vip/update/ch20.php',
   },
 
-
-   {
-    'name': "Laliga tv",
+  {
+    'name': "Laliga Tv",
     'image': "image/laliga.png",
     'url': 'https://stream.crichd.vip/update/laligauk.php',
   },
-    {
-    'name': "PTV sports",
+  {
+    'name': "PTV Sports",
     'image': "image/ptv.png",
     'url': 'https://stream.crichd.vip/update/ptv.php',
   },
 
-    {
-    'name': "Euro sports 1",
+  {
+    'name': "Euro Sports 1",
     'image': "image/euro1.jpg",
     'url': 'https://stream.crichd.vip/update/euro1.php',
   },
-    {
-    'name': "Sky sports F1",
+  {
+    'name': "Sky Sports F1",
     'image': "image/f1.png",
     'url': 'https://stream.crichd.vip/update/skyf1.php',
   },
-    {
-    'name': "Sky sports mix",
+  {
+    'name': "Sky Sports Mix",
     'image': "image/mix.jpg",
     'url': 'https://stream.crichd.vip/update/skysmix.php',
   },
-      {
+  {
     'name': "ITV 4 UK",
     'image': "image/i.jpg",
     'url': 'https://stream.crichd.vip/update/itv4.php',
   },
 ];
 
+// all Cricketchannels
+const List<Map<String, String>> cricketChannelList = [
+  // Url,image and name of channel
 
+  {
+    'name': "Sky Sports",
+    'image': "image/sky.png",
+    'url': 'https://stream.crichd.vip/update/skys2.php',
+  },
+  {
+    'name': "Star Sports",
+    'image': "image/star.jpg",
+    'url': 'https://stream.crichd.vip/update/star.php',
+  },
+  {
+    'name': "Star Sports Hindi",
+    'image': "image/starhindi.jpg",
+    'url': 'https://stream.crichd.vip/update/star1hi.php',
+  },
+  {
+    'name': "Willow Criket",
+    'image': "image/willow.jpg",
+    'url': 'https://stream.crichd.vip/update/willowcricket.php',
+  },
+
+  {
+    'name': "Fox Cricket",
+    'image': "image/fox.jpg",
+    'url': 'https://stream.crichd.vip/update/fox501.php',
+  },
+
+  {
+    'name': "Super Cricket",
+    'image': "image/s.jpg",
+    'url': 'https://stream.crichd.vip/update/sscricket.php',
+  },
+
+  {
+    'name': "PTV Sports",
+    'image': "image/ptv.png",
+    'url': 'https://stream.crichd.vip/update/ptv.php',
+  },
+];
+
+// all Footballchannels
+const List<Map<String, String>> footballChannelList = [
+  // Url,image and name of channel
+  {
+    'name': "Sky Sports Football",
+    'image': "image/skyfootball.png",
+    'url': 'https://stream.crichd.vip/update/skysfotb.php',
+  },
+
+  {
+    'name': "Sony Espn",
+    'image': "image/espn.jpg",
+    'url': 'https://stream.crichd.vip/update/espnus.php',
+  },
+
+  {
+    'name': "Ten 1",
+    'image': "image/ten1.png",
+    'url': 'https://stream.crichd.vip/update/ten1.php',
+  },
+
+  {
+    'name': "Spotrs Tv1",
+    'image': "image/1.jpg",
+    'url': 'https://stream.crichd.vip/update/espnus.php',
+  },
+  {
+    'name': "Sony Six",
+    'image': "image/six.png",
+    'url': 'https://stream.crichd.vip/update/espnus.php',
+  },
+
+  {
+    'name': "Geo Super",
+    'image': "image/geo.jpg",
+    'url': 'https://stream.crichd.vip/update/espnus.php',
+  },
+
+  {
+    'name': "Viaplay Sports 1",
+    'image': "image/via.jpg",
+    'url': 'https://stream.crichd.vip/update/premier.php',
+  },
+  {
+    'name': "Super Sports Football",
+    'image': "image/ssfootball.png",
+    'url': 'https://stream.crichd.vip/update/ssfotbal.php',
+  },
+
+  {
+    'name': "Laliga Tv",
+    'image': "image/laliga.png",
+    'url': 'https://stream.crichd.vip/update/laligauk.php',
+  },
+
+  {
+    'name': "Euro Sports 1",
+    'image': "image/euro1.jpg",
+    'url': 'https://stream.crichd.vip/update/euro1.php',
+  },
+
+  {
+    'name': "Sky Sports Mix",
+    'image': "image/mix.jpg",
+    'url': 'https://stream.crichd.vip/update/skysmix.php',
+  },
+];

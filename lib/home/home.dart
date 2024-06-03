@@ -1,18 +1,18 @@
 import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:webtv/category/category.dart';
+import 'package:webtv/channel_design/channel.dart';
 import 'package:webtv/channels_url/channels_url.dart';
-import 'package:webtv/decoration/myappbar.dart';
 import 'package:webtv/footer/footer.dart';
 import 'package:webtv/play/play.dart';
 import 'package:webtv/provider/provider.dart';
-import 'package:webtv/channel_design/channel.dart';
 
 class Home extends StatefulWidget {
   static const routeName = "/home";
-  const Home({super.key, required this.appbarName});
-  final String appbarName;
+  const Home({super.key});
+
   @override
   State<Home> createState() => _HomeState();
 }
@@ -20,13 +20,29 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    var mytextStyle = Theme.of(context).textTheme.headlineMedium; // calling text theme
+    var mytextStyle =
+        Theme.of(context).textTheme.headlineMedium; // calling text theme
     var primaryColor = Theme.of(context).primaryColor; // calling primary color
-    var mediaQuery = MediaQuery.of(context).size; // mediaQuery for responsive 
+    var mediaQuery = MediaQuery.of(context).size; // mediaQuery for responsive
     var itemNumber = min(5, (mediaQuery.width / 200).toInt());
 
     return Scaffold(
-      appBar: myAppBar(context, widget.appbarName), // calling custom appbar
+      appBar: AppBar(
+        // appbar with custom design
+        leadingWidth: MediaQuery.of(context).size.width * 0.2,
+        leading: Align(
+            alignment: Alignment.bottomLeft,
+            child: Container(
+                height: 100,
+                color: Colors.white,
+                child: Image.asset(
+                  "image/tv.png",
+                ))),
+        automaticallyImplyLeading: false,
+        centerTitle: true,
+        backgroundColor: Theme.of(context).primaryColor,
+      ),
+      // calling custom appbar
       body: NotificationListener<OverscrollIndicatorNotification>(
         onNotification: (notification) {
           notification.disallowIndicator();
@@ -61,7 +77,8 @@ class _HomeState extends State<Home> {
                 ),
                 SizedBox(
                   width: double.infinity,
-                  child: GridView.builder( // for channel list
+                  child: GridView.builder(
+                      // for channel list
                       shrinkWrap: true,
                       physics: const ScrollPhysics(
                           parent: NeverScrollableScrollPhysics()),
@@ -78,12 +95,10 @@ class _HomeState extends State<Home> {
                                 channelurl: channelList[index]['url']!,
                                 channelname: channelList[index]['name']!);
 
-                            Navigator.pushNamed(
-                              context,
-                              Play.routeName,
-                            );
+                            Navigator.pushNamed(context, Play.routeName);
                           },
-                          child: Channel( // channel property imageurl,imagename
+                          child: Channel(
+                              // channel property imageurl,imagename
                               mytextStyle: mytextStyle,
                               channelName: channelList[index]['name']!,
                               imageUrl: channelList[index]['image']!),

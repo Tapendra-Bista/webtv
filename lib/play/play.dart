@@ -40,34 +40,28 @@ class Play extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 20, bottom: 20),
-                  child: Center(
-                    child: Text(
-                      "Watch Live Sports Tv Streaming online. Watch live sports football, cricket, and all popular live sports tv channels online free from webtv.",
+                  child: Text(
+                    "Watch Live Sports Tv Streaming online. Watch live sports football, cricket, and all popular live sports tv channels online free from webtv.",
+                    style: mytextStyle.copyWith(fontSize: 14),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20, bottom: 20),
+                  child: Text(
+                    "Note: Please don't reload page , it may be crashed due to non use of backend and go to home page to change channel.",
+                    style: mytextStyle.copyWith(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w700,
+                        color: primaryColor),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20, bottom: 20),
+                  child: Consumer<ChannelProvider>(
+                    // watch provider or to get data from provider
+                    builder: (context, value, child) => Text(
+                      "Your are watching ${value.channelName} now !!!",
                       style: mytextStyle.copyWith(fontSize: 14),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 20, bottom: 20),
-                  child: Center(
-                    child: Text(
-                      "Note: Please don't reload page , it may be crashed due to non use of backend and go to home page to change channel.",
-                      style: mytextStyle.copyWith(
-                          fontSize: 10,
-                          fontWeight: FontWeight.w700,
-                          color: primaryColor),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 20, bottom: 20),
-                  child: Center(
-                    child: Consumer<ChannelProvider>(
-                      // watch provider or to get data from provider
-                      builder: (context, value, child) => Text(
-                        "Your are watching ${value.channelName} now !!!",
-                        style: mytextStyle.copyWith(fontSize: 14),
-                      ),
                     ),
                   ),
                 ),
