@@ -3,12 +3,16 @@ import 'package:webtv/decoration/ani_text.dart';
 
 AppBar myAppBar(context, String text) {
   return AppBar(
+    elevation: 0,
+    bottomOpacity: 0,
+    toolbarOpacity: 0,
       // appbar with custom design
       leadingWidth: MediaQuery.of(context).size.width * 0.2,
       leading: Align(
           alignment: Alignment.bottomLeft,
           child: Container(
-              height: 100,
+              height:AppBar().preferredSize.height,
+           
               color: Colors.white,
               child: Image.asset(
                 "image/tv.png",
