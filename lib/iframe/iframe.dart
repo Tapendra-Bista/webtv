@@ -7,7 +7,7 @@ class IframeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<ChannelProvider>().provideTv(); // calling provider void function from channel provider
+
     return Column(
       children: [
         SizedBox(

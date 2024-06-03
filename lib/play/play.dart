@@ -16,7 +16,7 @@ class Play extends StatelessWidget {
     var mytextStyle =
         Theme.of(context).textTheme.headlineMedium; // calling text theme
     var primaryColor = Theme.of(context).primaryColor; // calling primary color
-
+    context.watch<ChannelProvider>().provideTv(); // calling provider void function from channel provider
     return Scaffold(
       appBar: myAppBar(context, context.watch<ChannelProvider>().channelName!),
       body: NotificationListener<OverscrollIndicatorNotification>(

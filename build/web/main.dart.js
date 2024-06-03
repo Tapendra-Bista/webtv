@@ -67718,12 +67718,9 @@ r.Bh(q,p)
 A.uy(s).LL("/Play",null,t.X)},
 $S:0}
 A.CP.prototype={
-O(a){var s,r,q=t.X5
-A.YT(a,!0,q).AJ()
-s=t.l
-r=A.ct(a,null,s).w
+O(a){var s=t.l,r=A.ct(a,null,s).w
 s=A.ct(a,null,s).w
-return A.Rz(A.b([A.hY(A.adW(new A.Vo(),q),r.a.b,s.a.a)],t.F),B.bv,B.c2)}}
+return A.Rz(A.b([A.hY(A.adW(new A.Vo(),t.X5),r.a.b,s.a.a)],t.F),B.bv,B.c2)}}
 A.Vo.prototype={
 $3(a,b,c){var s=b.b
 s.toString
@@ -67741,6 +67738,7 @@ return new A.eG(s,$.aP())},
 $S:409}
 A.oD.prototype={
 O(a){var s=null,r=A.ah(a).p2.e,q=A.ah(a),p=t.X5
+A.YT(a,!0,p).AJ()
 return A.agi(A.ajm(a,A.YT(a,!0,p).a),new A.cd(new A.Yw(),A.agq(new A.ds(B.kf,A.Rz(A.b([new A.ds(B.bY,A.i0("Live Tv Channels Online Free Free Free",r.lW(25)),s),new A.ds(B.bY,A.jE(A.i0(u.R,r.lW(14)),s,s),s),new A.ds(B.bY,A.jE(A.i0("Note: Please don't reload page , it may be crashed due to non use of backend and go to home page to change channel.",r.J3(q.fr,10,B.h3)),s,s),s),new A.ds(B.bY,A.jE(A.adW(new A.Yx(r),p),s,s),s),B.Ab,new A.tv(r,s),B.vv],t.F),B.bv,B.c2),s)),s,t.eq))}}
 A.Yw.prototype={
 $1(a){a.c=!1
