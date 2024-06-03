@@ -17,12 +17,12 @@ AppBar myAppBar(context, String text) {
               child: Image.asset(
                 "image/tv.png",
               ))),
-      automaticallyImplyLeading: false,
+     
       centerTitle: true,
       backgroundColor: Theme.of(context).primaryColor,
       title: animatedText(
         text,
         Theme.of(context).textTheme.headlineMedium!.copyWith(
-            color: Colors.white, fontWeight: FontWeight.normal, fontSize:30),
+            color: Colors.white, fontWeight: FontWeight.normal, fontSize:AppBar().preferredSize.height/2),
       ));
 }
