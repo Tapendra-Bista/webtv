@@ -4,7 +4,7 @@ import 'package:webtv/cricket/cricket.dart';
 import 'package:webtv/decoration/btnstyle.dart';
 import 'package:webtv/football/football.dart';
 
-class Category extends StatelessWidget {
+class Category extends StatefulWidget {
   // top part which distinguish app sport,cricket and football
   const Category({
     super.key,
@@ -18,56 +18,61 @@ class Category extends StatelessWidget {
   final TextStyle? mytextStyle;
 
   @override
+  State<Category> createState() => _CategoryState();
+}
+
+class _CategoryState extends State<Category> {
+  @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         SizedBox(
-          width: mediaQuery.width * 0.3,
+          width: widget.mediaQuery.width * 0.3,
           height: 30,
           child: FittedBox(
             child: TextButton.icon(
                 icon: Icon(
                   Icons.games_rounded,
-                  color: primaryColor,
+                  color: widget.primaryColor,
                 ),
                 style: buttonStyle,
                 onPressed: () {
                   Navigator.pushNamed(context, AllSports.routeName);
                 },
-                label: Text("All Sports", style: mytextStyle)),
+                label: Text("All Sports", style: widget.mytextStyle)),
           ),
         ),
         SizedBox(
-          width: mediaQuery.width * 0.3,
+          width: widget.mediaQuery.width * 0.3,
           height: 30,
           child: FittedBox(
             child: TextButton.icon(
                 icon: Icon(
                   Icons.sports_cricket_rounded,
-                  color: primaryColor,
+                  color: widget.primaryColor,
                 ),
                 style: buttonStyle,
                 onPressed: () {
                   Navigator.pushNamed(context, Cricket.routeName);
                 },
-                label: Text("Cricket", style: mytextStyle)),
+                label: Text("Cricket", style: widget.mytextStyle)),
           ),
         ),
         SizedBox(
-          width: mediaQuery.width * 0.3,
+          width: widget.mediaQuery.width * 0.3,
           height: 30,
           child: FittedBox(
             child: TextButton.icon(
                 icon: Icon(
                   Icons.sports_soccer_rounded,
-                  color: primaryColor,
+                  color: widget.primaryColor,
                 ),
                 style: buttonStyle,
                 onPressed: () {
                   Navigator.pushNamed(context, Football.routeName);
                 },
-                label: Text("Football", style: mytextStyle)),
+                label: Text("Football", style: widget.mytextStyle)),
           ),
         ),
       ],

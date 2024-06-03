@@ -5,20 +5,26 @@ import 'package:webtv/footer/footer.dart';
 import 'package:webtv/iframe/iframe.dart';
 import 'package:webtv/provider/provider.dart';
 
-class Play extends StatelessWidget {
+class Play extends StatefulWidget {
   static const routeName = "/Play";
   const Play({
     super.key,
   });
 
   @override
+  State<Play> createState() => _PlayState();
+}
+
+class _PlayState extends State<Play> {
+  @override
   Widget build(BuildContext context) {
     var mytextStyle =
         Theme.of(context).textTheme.headlineMedium; // calling text theme
     var primaryColor = Theme.of(context).primaryColor; // calling primary color
-    context.watch<ChannelProvider>().provideTv(); // calling provider void function from channel provider
+    // calling provider void function from channel provider
     return Scaffold(
-      appBar: myAppBar(context, context.watch<ChannelProvider>().channelName!),
+      appBar:
+          myAppBar(context, context.watch<ChannelProvider>().channelName!),
       body: NotificationListener<OverscrollIndicatorNotification>(
         onNotification: (notification) {
           notification.disallowIndicator();

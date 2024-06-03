@@ -10,10 +10,11 @@ import 'package:webtv/footer/footer.dart';
 import 'package:webtv/play/play.dart';
 import 'package:webtv/provider/provider.dart';
 
+
 class Cricket extends StatefulWidget {
   static const routeName = "/Cricket";
   const Cricket({super.key, });
- 
+
   @override
   State<Cricket> createState() => _CricketState();
 }
@@ -76,14 +77,11 @@ class _CricketState extends State<Cricket> {
                       itemBuilder: (BuildContext context, int index) {
                         return GestureDetector(
                           onTap: () {
-                            context.read<ChannelProvider>().updated(
-                                channelurl: cricketChannelList[index]['url']!,
-                                channelname: cricketChannelList[index]['name']!);
-
-                            Navigator.pushNamed(
-                                context,
-                                Play.routeName
-                                );
+                                Navigator.pushNamed(context, Play.routeName);
+                        context.read<ChannelProvider>().updated(
+                              channelurl: channelList[index]['url']!,
+                                channelname: channelList[index]['name']!);
+                             
                           },
                           child: Channel(
                               // channel property imageurl,imagename

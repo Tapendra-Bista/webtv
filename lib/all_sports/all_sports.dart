@@ -10,10 +10,11 @@ import 'package:webtv/footer/footer.dart';
 import 'package:webtv/play/play.dart';
 import 'package:webtv/provider/provider.dart';
 
+
 class AllSports extends StatefulWidget {
   static const routeName = "/AllSports";
   const AllSports({super.key});
- 
+
   @override
   State<AllSports> createState() => _AllSportsState();
 }
@@ -28,7 +29,7 @@ class _AllSportsState extends State<AllSports> {
     var itemNumber = min(5, (mediaQuery.width / 200).toInt());
 
     return Scaffold(
-      appBar: myAppBar(context,"All sports"), // calling custom appbar
+      appBar: myAppBar(context,"All Sports"), // calling custom appbar
       body: NotificationListener<OverscrollIndicatorNotification>(
         onNotification: (notification) {
           notification.disallowIndicator();
@@ -76,14 +77,10 @@ class _AllSportsState extends State<AllSports> {
                       itemBuilder: (BuildContext context, int index) {
                         return GestureDetector(
                           onTap: () {
-                            context.read<ChannelProvider>().updated(
-                                channelurl: channelList[index]['url']!,
+                              Navigator.pushNamed(context, Play.routeName);
+                          context.read<ChannelProvider>().updated(
+                              channelurl: channelList[index]['url']!,
                                 channelname: channelList[index]['name']!);
-
-                            Navigator.pushNamed(
-                                context,
-                                Play.routeName
-                                );
                           },
                           child: Channel(
                               // channel property imageurl,imagename

@@ -5,35 +5,28 @@ import 'package:webtv/all_sports/all_sports.dart';
 import 'package:webtv/cricket/cricket.dart';
 import 'package:webtv/football/football.dart';
 import 'package:webtv/home/home.dart';
+
 import 'package:webtv/play/play.dart';
 
 Route<dynamic>? routes(settings) {
   switch (settings.name) {
     case Play.routeName:
       return PageAnimationTransition(
-        
           page: const Play(), pageAnimationType: RightToLeftFadedTransition());
     case Football.routeName:
       return PageAnimationTransition(
-          page: const Football(
-           
-          ),
+          page: const Football(),
           pageAnimationType: RightToLeftFadedTransition());
     case Cricket.routeName:
       return PageAnimationTransition(
-          page: const Cricket(
-           
-          ),
+          page: const Cricket(),
           pageAnimationType: RightToLeftFadedTransition());
-          case AllSports.routeName:
+    case AllSports.routeName:
       return PageAnimationTransition(
-          page: const AllSports(
-         
-          ),
+          page: const AllSports(),
           pageAnimationType: RightToLeftFadedTransition());
     default:
       return PageAnimationTransition(
-          page: const Home(),
-          pageAnimationType: RightToLeftFadedTransition());
+          page: const Home(), pageAnimationType: RightToLeftFadedTransition());
   }
 }

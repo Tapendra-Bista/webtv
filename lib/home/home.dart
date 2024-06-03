@@ -9,6 +9,7 @@ import 'package:webtv/footer/footer.dart';
 import 'package:webtv/play/play.dart';
 import 'package:webtv/provider/provider.dart';
 
+
 class Home extends StatefulWidget {
   static const routeName = "/home";
   const Home({super.key});
@@ -91,11 +92,11 @@ class _HomeState extends State<Home> {
                       itemBuilder: (BuildContext context, int index) {
                         return GestureDetector(
                           onTap: () {
-                            context.read<ChannelProvider>().updated(
-                                channelurl: channelList[index]['url']!,
-                                channelname: channelList[index]['name']!);
-
                             Navigator.pushNamed(context, Play.routeName);
+                            context.read<ChannelProvider>().updated(
+                              channelurl: channelList[index]['url']!,
+                                channelname: channelList[index]['name']!);
+                          
                           },
                           child: Channel(
                               // channel property imageurl,imagename

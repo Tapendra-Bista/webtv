@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:webtv/decoration/boxdecoration.dart';
 
-class Channel extends StatelessWidget { // channel design 
+class Channel extends StatefulWidget { // channel design 
   const Channel({
     super.key,
     required this.mytextStyle,
@@ -12,6 +12,12 @@ class Channel extends StatelessWidget { // channel design
   final TextStyle? mytextStyle;
   final String imageUrl;
   final String channelName;
+
+  @override
+  State<Channel> createState() => _ChannelState();
+}
+
+class _ChannelState extends State<Channel> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,7 +30,7 @@ class Channel extends StatelessWidget { // channel design
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
         Image.asset(
-          imageUrl,
+          widget.imageUrl,
           fit: BoxFit.cover,
           height: 130,
         ),
@@ -39,7 +45,7 @@ class Channel extends StatelessWidget { // channel design
          const SizedBox(
           height: 5,
         ),
-        Text(channelName, style: mytextStyle!.copyWith(fontSize: 14)),
+        Text(widget.channelName, style: widget.mytextStyle!.copyWith(fontSize: 14)),
                 ],
               ),
       ),

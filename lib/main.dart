@@ -17,11 +17,13 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => ChannelProvider()),
+     
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'webtv',
         theme: myThemeData,
+    
         onGenerateRoute: routes,
       ),
     );
