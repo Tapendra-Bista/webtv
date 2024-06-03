@@ -16,13 +16,9 @@ AppBar myAppBar(context, String text) {
       automaticallyImplyLeading: false,
       centerTitle: true,
       backgroundColor: Theme.of(context).primaryColor,
-      title: SizedBox(
-        child: Center(
-          child: animatedText(
-            text,
-            Theme.of(context).textTheme.headlineMedium!.copyWith(
-                color: Colors.white, fontWeight: FontWeight.normal, fontSize: 30),
-          ),
-        ),
+      title: animatedText(
+        text,
+        Theme.of(context).textTheme.headlineMedium!.copyWith(
+            color: Colors.white, fontWeight: FontWeight.normal, fontSize:MediaQuery.of(context).size.width/4),
       ));
 }
