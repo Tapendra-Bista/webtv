@@ -1,25 +1,19 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:webtv/category/category.dart';
-import 'package:webtv/channel_design/channel.dart';
-import 'package:webtv/channels_url/channels_url.dart';
+import 'package:webtv/channels_url/cric_chennels.dart';
+
 import 'package:webtv/decoration/myappbar.dart';
 import 'package:webtv/footer/footer.dart';
-import 'package:webtv/play/play.dart';
-import 'package:webtv/provider/provider.dart';
+import 'package:webtv/home/grid_items.dart';
 
-
-class Cricket extends StatefulWidget {
+class Cricket extends StatelessWidget {
   static const routeName = "/Cricket";
-  const Cricket({super.key, });
+  const Cricket({
+    super.key,
+  });
 
-  @override
-  State<Cricket> createState() => _CricketState();
-}
-
-class _CricketState extends State<Cricket> {
   @override
   Widget build(BuildContext context) {
     var mytextStyle =
@@ -29,7 +23,7 @@ class _CricketState extends State<Cricket> {
     var itemNumber = min(5, (mediaQuery.width / 200).toInt());
 
     return Scaffold(
-      appBar: myAppBar(context,"Cricket"), // calling custom appbar
+      appBar: myAppBar(context, "Cricket"), // calling custom appbar
       body: NotificationListener<OverscrollIndicatorNotification>(
         onNotification: (notification) {
           notification.disallowIndicator();
@@ -60,36 +54,10 @@ class _CricketState extends State<Cricket> {
                     style: mytextStyle.copyWith(fontSize: 14),
                   ),
                 ),
-                SizedBox(
-                  width: double.infinity,
-                  child: GridView.builder(
-                      // for channel list
-                      shrinkWrap: true,
-                      physics: const ScrollPhysics(
-                          parent: NeverScrollableScrollPhysics()),
-                      itemCount:cricketChannelList.length,
-                      
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          mainAxisSpacing: 20,
-                          childAspectRatio: 1,
-                          crossAxisSpacing: 20,
-                          crossAxisCount: itemNumber == 1 ? 2 : itemNumber),
-                      itemBuilder: (BuildContext context, int index) {
-                        return GestureDetector(
-                          onTap: () {
-                                Navigator.pushNamed(context, Play.routeName);
-                        context.read<ChannelProvider>().updated(
-                              channelurl: channelList[index]['url']!,
-                                channelname: channelList[index]['name']!);
-                             
-                          },
-                          child: Channel(
-                              // channel property imageurl,imagename
-                              mytextStyle: mytextStyle,
-                              channelName: cricketChannelList[index]['name']!,
-                              imageUrl: cricketChannelList[index]['image']!),
-                        );
-                      }),
+                GridItems(
+                  itemNumber: itemNumber,
+                  mytextStyle: mytextStyle,
+                  myList: cricketChannelList,
                 ),
                 const SizedBox(
                   height: 30,

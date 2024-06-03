@@ -1,24 +1,16 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:webtv/category/category.dart';
-import 'package:webtv/channel_design/channel.dart';
 import 'package:webtv/channels_url/channels_url.dart';
 import 'package:webtv/footer/footer.dart';
-import 'package:webtv/play/play.dart';
-import 'package:webtv/provider/provider.dart';
+import 'package:webtv/home/grid_items.dart';
 
 
-class Home extends StatefulWidget {
+class Home extends StatelessWidget {
   static const routeName = "/home";
   const Home({super.key});
 
-  @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     var mytextStyle =
@@ -76,36 +68,7 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                 ),
-                SizedBox(
-                  width: double.infinity,
-                  child: GridView.builder(
-                      // for channel list
-                      shrinkWrap: true,
-                      physics: const ScrollPhysics(
-                          parent: NeverScrollableScrollPhysics()),
-                      itemCount: channelList.length,
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          mainAxisSpacing: 20,
-                          childAspectRatio: 1,
-                          crossAxisSpacing: 20,
-                          crossAxisCount: itemNumber == 1 ? 2 : itemNumber),
-                      itemBuilder: (BuildContext context, int index) {
-                        return GestureDetector(
-                          onTap: () {
-                            Navigator.pushNamed(context, Play.routeName);
-                            context.read<ChannelProvider>().updated(
-                              channelurl: channelList[index]['url']!,
-                                channelname: channelList[index]['name']!);
-                          
-                          },
-                          child: Channel(
-                              // channel property imageurl,imagename
-                              mytextStyle: mytextStyle,
-                              channelName: channelList[index]['name']!,
-                              imageUrl: channelList[index]['image']!),
-                        );
-                      }),
-                ),
+                GridItems(itemNumber: itemNumber, mytextStyle: mytextStyle,myList:channelList,),
                 const SizedBox(
                   height: 30,
                 ),
@@ -121,3 +84,5 @@ class _HomeState extends State<Home> {
     );
   }
 }
+
+

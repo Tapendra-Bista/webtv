@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:webtv/decoration/boxdecoration.dart';
 
-class Footer extends StatefulWidget {  // bottom part or footer about disclaimer
+class Footer extends StatelessWidget {  // bottom part or footer about disclaimer
   const Footer({
     super.key,
     required this.mytextStyle,
@@ -9,11 +9,6 @@ class Footer extends StatefulWidget {  // bottom part or footer about disclaimer
 
   final TextStyle? mytextStyle;
 
-  @override
-  State<Footer> createState() => _FooterState();
-}
-
-class _FooterState extends State<Footer> {
   @override
   Widget build(BuildContext context) {
         var primaryColor = Theme.of(context).primaryColor;
@@ -26,7 +21,7 @@ class _FooterState extends State<Footer> {
         child: RichText(
             text: TextSpan(
                 text: "DISCLAIMER :",
-                style: widget.mytextStyle!.copyWith(
+                style: mytextStyle!.copyWith(
                   color: primaryColor,
                   decoration: TextDecoration.underline,
                   decorationColor:primaryColor,
@@ -35,7 +30,7 @@ class _FooterState extends State<Footer> {
               TextSpan(
                   text:
                       "\nIt is our policy to respond to clear notices of alleged copyright infringement. If you are a copyright owner or an agent thereof, and you believe that any content hosted on our web site (webtv) infringes your copyrights, then you may submit a notification for us in email (tapendrabista01@gmail.com)",
-                  style: widget.mytextStyle!.copyWith(fontSize:15, color:primaryColor))
+                  style: mytextStyle!.copyWith(fontSize:15, color:primaryColor))
             ])),
       ),
     );

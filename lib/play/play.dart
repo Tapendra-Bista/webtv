@@ -5,17 +5,12 @@ import 'package:webtv/footer/footer.dart';
 import 'package:webtv/iframe/iframe.dart';
 import 'package:webtv/provider/provider.dart';
 
-class Play extends StatefulWidget {
+class Play extends StatelessWidget {
   static const routeName = "/Play";
   const Play({
     super.key,
   });
 
-  @override
-  State<Play> createState() => _PlayState();
-}
-
-class _PlayState extends State<Play> {
   @override
   Widget build(BuildContext context) {
     var mytextStyle =

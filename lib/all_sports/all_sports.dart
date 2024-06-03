@@ -1,25 +1,17 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:webtv/category/category.dart';
-import 'package:webtv/channel_design/channel.dart';
 import 'package:webtv/channels_url/channels_url.dart';
 import 'package:webtv/decoration/myappbar.dart';
 import 'package:webtv/footer/footer.dart';
-import 'package:webtv/play/play.dart';
-import 'package:webtv/provider/provider.dart';
+import 'package:webtv/home/grid_items.dart';
 
 
-class AllSports extends StatefulWidget {
+class AllSports extends StatelessWidget {
   static const routeName = "/AllSports";
   const AllSports({super.key});
 
-  @override
-  State<AllSports> createState() => _AllSportsState();
-}
-
-class _AllSportsState extends State<AllSports> {
   @override
   Widget build(BuildContext context) {
     var mytextStyle =
@@ -60,36 +52,7 @@ class _AllSportsState extends State<AllSports> {
                     style: mytextStyle.copyWith(fontSize: 14),
                   ),
                 ),
-                SizedBox(
-                  width: double.infinity,
-                  child: GridView.builder(
-                      // for channel list
-                      shrinkWrap: true,
-                      physics: const ScrollPhysics(
-                          parent: NeverScrollableScrollPhysics()),
-                      itemCount: channelList.length,
-                      
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          mainAxisSpacing: 20,
-                          childAspectRatio: 1,
-                          crossAxisSpacing: 20,
-                          crossAxisCount: itemNumber == 1 ? 2 : itemNumber),
-                      itemBuilder: (BuildContext context, int index) {
-                        return GestureDetector(
-                          onTap: () {
-                              Navigator.pushNamed(context, Play.routeName);
-                          context.read<ChannelProvider>().updated(
-                              channelurl: channelList[index]['url']!,
-                                channelname: channelList[index]['name']!);
-                          },
-                          child: Channel(
-                              // channel property imageurl,imagename
-                              mytextStyle: mytextStyle,
-                              channelName: channelList[index]['name']!,
-                              imageUrl: channelList[index]['image']!),
-                        );
-                      }),
-                ),
+               GridItems(itemNumber: itemNumber, mytextStyle: mytextStyle,myList:channelList,),
                 const SizedBox(
                   height: 30,
                 ),
@@ -105,3 +68,4 @@ class _AllSportsState extends State<AllSports> {
     );
   }
 }
+
