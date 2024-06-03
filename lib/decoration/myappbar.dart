@@ -8,7 +8,7 @@ AppBar myAppBar(context, String title) {
       leading: Align(
           alignment: Alignment.bottomLeft,
           child: Container(
-              height: 100,
+              
               color: Colors.white,
               child: Image.asset(
                 "image/tv.png",
@@ -16,11 +16,14 @@ AppBar myAppBar(context, String title) {
       automaticallyImplyLeading: false,
       centerTitle: true,
       backgroundColor: Theme.of(context).primaryColor,
-      title: Center(
-        child: animatedText(
-          title,
-          Theme.of(context).textTheme.headlineMedium!.copyWith(
-              color: Colors.white, fontWeight: FontWeight.normal, fontSize: 30),
-        ),
+      title: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          animatedText(
+            title,
+            Theme.of(context).textTheme.headlineMedium!.copyWith(
+                color: Colors.white, fontWeight: FontWeight.normal, fontSize: 30),
+          ),
+        ],
       ));
 }

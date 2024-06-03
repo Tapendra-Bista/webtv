@@ -118,5 +118,10 @@ const List<Map<String, String>> channelList = [
     'image': "image/i.jpg",
     'url': 'https://stream.crichd.vip/update/itv4.php',
   },
+    {
+    'name': "Sky Sports Golf",
+    'image': "image/gf.png",
+    'url': 'https://stream.crichd.vip/update/skys4.php',
+  },
 ];
 
