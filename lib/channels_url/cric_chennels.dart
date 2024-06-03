@@ -18,7 +18,7 @@ const List<Map<String, String>> cricketChannelList = [
     'url': 'https://stream.crichd.vip/update/star1hi.php',
   },
   {
-    'name': "Willow Criket",
+    'name': "Willow Cricket",
     'image': "image/willow.jpg",
     'url': 'https://stream.crichd.vip/update/willowcricket.php',
   },

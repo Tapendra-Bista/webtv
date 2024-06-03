@@ -19,6 +19,6 @@ AppBar myAppBar(context, String text) {
       title: animatedText(
         text,
         Theme.of(context).textTheme.headlineMedium!.copyWith(
-            color: Colors.white, fontWeight: FontWeight.normal, fontSize:MediaQuery.of(context).size.width/4),
+            color: Colors.white, fontWeight: FontWeight.normal, fontSize:30),
       ));
 }
