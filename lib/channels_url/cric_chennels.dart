@@ -40,6 +40,12 @@ const List<Map<String, String>> cricketChannelList = [
     'image': "image/ptv.png",
     'url': 'https://stream.crichd.vip/update/ptv.php',
   },
+     {
+    'name': "Willow Cricket xtra",
+    'image': "image/xtra.jpg",
+    //willowextra
+    'url':'https://stream.crichd.vip/update/willowextra.php'
+  },
 ];
 
 

@@ -26,6 +26,12 @@ const List<Map<String, String>> channelList = [
     'image': "image/willow.jpg",
     'url': 'https://stream.crichd.vip/update/willowcricket.php',
   },
+    {
+    'name': "Willow Cricket xtra",
+    'image': "image/xtra.jpg",
+    'url':'https://stream.crichd.vip/update/willowextra.php',
+  },
+//willowextra
   {
     'name': "Sony Espn",
     'image': "image/espn.jpg",

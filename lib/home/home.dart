@@ -5,7 +5,7 @@ import 'package:webtv/category/category.dart';
 import 'package:webtv/channels_url/channels_url.dart';
 import 'package:webtv/footer/footer.dart';
 import 'package:webtv/home/grid_items.dart';
-
+import 'package:webtv/search/search.dart';
 
 class Home extends StatelessWidget {
   static const routeName = "/home";
@@ -21,6 +21,20 @@ class Home extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 30),
+            child: IconButton(
+                onPressed: () {
+                  mechanisimToSearch(context);
+                },
+                icon: const Icon(
+                  Icons.search_rounded,
+                  color: Colors.white,
+                  size: 30,
+                )),
+          )
+        ],
         // appbar with custom design
         leadingWidth: MediaQuery.of(context).size.width * 0.2,
         leading: Align(
@@ -68,7 +82,11 @@ class Home extends StatelessWidget {
                     ),
                   ),
                 ),
-                GridItems(itemNumber: itemNumber, mytextStyle: mytextStyle,myList:channelList,),
+                GridItems(
+                  itemNumber: itemNumber,
+                  mytextStyle: mytextStyle,
+                  myList: channelList,
+                ),
                 const SizedBox(
                   height: 30,
                 ),
@@ -84,5 +102,3 @@ class Home extends StatelessWidget {
     );
   }
 }
-
-

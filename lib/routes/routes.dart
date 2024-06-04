@@ -5,7 +5,6 @@ import 'package:webtv/all_sports/all_sports.dart';
 import 'package:webtv/cricket/cricket.dart';
 import 'package:webtv/football/football.dart';
 import 'package:webtv/home/home.dart';
-
 import 'package:webtv/play/play.dart';
 
 Route<dynamic>? routes(settings) {
@@ -28,5 +27,7 @@ Route<dynamic>? routes(settings) {
     default:
       return PageAnimationTransition(
           page: const Home(), pageAnimationType: RightToLeftFadedTransition());
+  
+     
   }
 }
