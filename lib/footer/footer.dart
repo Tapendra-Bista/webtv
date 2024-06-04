@@ -18,20 +18,31 @@ class Footer extends StatelessWidget {  // bottom part or footer about disclaime
       decoration: boxDecoration,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: RichText(
-            text: TextSpan(
-                text: "DISCLAIMER :",
-                style: mytextStyle!.copyWith(
-                  color: primaryColor,
-                  decoration: TextDecoration.underline,
-                  decorationColor:primaryColor,
-                ),
-                children: [
-              TextSpan(
-                  text:
-                      "\nIt is our policy to respond to clear notices of alleged copyright infringement. If you are a copyright owner or an agent thereof, and you believe that any content hosted on our web site (webtv) infringes your copyrights, then you may submit a notification for us in email (tapendrabista01@gmail.com)",
-                  style: mytextStyle!.copyWith(fontSize:15, color:primaryColor))
-            ])),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            RichText(
+            
+                text: TextSpan(
+                    text: "DISCLAIMER :",
+                    style: mytextStyle!.copyWith(
+                      color: primaryColor,
+                      decoration: TextDecoration.underline,
+                      decorationColor:primaryColor,
+                    ),
+                    
+                    children: [
+                  TextSpan(
+                      text:
+                          "\nIt is our policy to respond to clear notices of alleged copyright infringement. If you are a copyright owner or an agent thereof, and you believe that any content hosted on our web site (webtv) infringes your copyrights, then you may submit a notification for us in email (tapendrabista01@gmail.com)",
+                      style: mytextStyle!.copyWith(fontSize:15, color:primaryColor)),
+                     
+                      
+                ])),
+                Center(child: Text("\n© jun-2024.all rights reserved. designed and developed by: Tapendra Bista",style: mytextStyle!.copyWith(fontSize:18, color:primaryColor,)))
+          ],
+        ),
       ),
     );
   }
