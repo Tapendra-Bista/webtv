@@ -139,5 +139,10 @@ const List<Map<String, String>> channelList = [
     'image': "image/gf.png",
     'url': 'https://stream.crichd.vip/update/skys4.php',
   },
+      {
+    'name': "Super Grandstand",
+    'image': "image/grand.png",
+    'url': 'https://stream.crichd.vip/update/ssgrandstand.php',
+  },
 ];
 
