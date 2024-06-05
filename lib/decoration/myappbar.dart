@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:webtv/decoration/ani_text.dart';
 import 'package:webtv/search/search.dart';
 
-AppBar myAppBar(context, String text) {
+AppBar myAppBar(BuildContext context, String text) {
   return AppBar(
       actions: [
         Padding(

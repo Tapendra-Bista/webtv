@@ -7,12 +7,15 @@ import 'package:webtv/decoration/myappbar.dart';
 import 'package:webtv/footer/footer.dart';
 import 'package:webtv/home/grid_items.dart';
 
-
-
-class Football extends StatelessWidget {
+class Football extends StatefulWidget {
   static const routeName = "/Football";
   const Football({super.key});
 
+  @override
+  State<Football> createState() => _FootballState();
+}
+
+class _FootballState extends State<Football> {
   @override
   Widget build(BuildContext context) {
     var mytextStyle =
@@ -22,7 +25,7 @@ class Football extends StatelessWidget {
     var itemNumber = min(5, (mediaQuery.width / 200).toInt());
 
     return Scaffold(
-      appBar: myAppBar(context,"Football"), // calling custom appbar
+      appBar: myAppBar(context, "Football"), // calling custom appbar
       body: NotificationListener<OverscrollIndicatorNotification>(
         onNotification: (notification) {
           notification.disallowIndicator();
@@ -53,7 +56,11 @@ class Football extends StatelessWidget {
                     style: mytextStyle.copyWith(fontSize: 14),
                   ),
                 ),
-              GridItems(itemNumber: itemNumber, mytextStyle: mytextStyle,myList:footballChannelList,),
+                GridItems(
+                  itemNumber: itemNumber,
+                  mytextStyle: mytextStyle,
+                  myList: footballChannelList,
+                ),
                 const SizedBox(
                   height: 30,
                 ),
@@ -69,4 +76,3 @@ class Football extends StatelessWidget {
     );
   }
 }
-

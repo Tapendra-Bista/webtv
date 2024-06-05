@@ -30,8 +30,8 @@ class GridItems extends StatelessWidget {
               crossAxisSpacing: 20,
               crossAxisCount: itemNumber == 1 ? 2 : itemNumber),
           itemBuilder: (BuildContext context, int index) {
-            channelSearch.add(
-                ChannelSearch(myList[index]['name'], myList[index]['url'],myList[index]['image']));
+            channelSearch.add(ChannelSearch(myList[index]['name'],
+                myList[index]['url'], myList[index]['image']));
 
             return GestureDetector(
               onTap: () {

@@ -8,10 +8,15 @@ import 'package:webtv/footer/footer.dart';
 import 'package:webtv/home/grid_items.dart';
 
 
-class AllSports extends StatelessWidget {
+class AllSports extends StatefulWidget {
   static const routeName = "/AllSports";
   const AllSports({super.key});
 
+  @override
+  State<AllSports> createState() => _AllSportsState();
+}
+
+class _AllSportsState extends State<AllSports> {
   @override
   Widget build(BuildContext context) {
     var mytextStyle =

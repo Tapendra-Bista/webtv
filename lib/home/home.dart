@@ -7,10 +7,15 @@ import 'package:webtv/footer/footer.dart';
 import 'package:webtv/home/grid_items.dart';
 import 'package:webtv/search/search.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   static const routeName = "/home";
   const Home({super.key});
 
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     var mytextStyle =

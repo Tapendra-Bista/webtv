@@ -7,12 +7,17 @@ import 'package:webtv/decoration/myappbar.dart';
 import 'package:webtv/footer/footer.dart';
 import 'package:webtv/home/grid_items.dart';
 
-class Cricket extends StatelessWidget {
+class Cricket extends StatefulWidget {
   static const routeName = "/Cricket";
   const Cricket({
     super.key,
   });
 
+  @override
+  State<Cricket> createState() => _CricketState();
+}
+
+class _CricketState extends State<Cricket> {
   @override
   Widget build(BuildContext context) {
     var mytextStyle =

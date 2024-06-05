@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:webtv/provider/provider.dart';
 
-
 class IframeScreen extends StatelessWidget {
   const IframeScreen({super.key});
 
@@ -13,9 +12,8 @@ class IframeScreen extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         child: Consumer<ChannelProvider>(
           builder: (context, value, child) {
-                 
             return value.widget!;
-          } //calling widget to show stream
+          },
         ));
   }
 }
