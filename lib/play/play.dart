@@ -16,6 +16,7 @@ class Play extends StatefulWidget {
   State<Play> createState() => _PlayState();
 }
 
+// context.watch<ChannelProvider>().channelName!,
 class _PlayState extends State<Play> {
   @override
   Widget build(BuildContext context) {
