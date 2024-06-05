@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:webtv/decoration/ani_text.dart';
+import 'package:webtv/home/home.dart';
 import 'package:webtv/search/search.dart';
 
 AppBar myAppBar(BuildContext context, String text) {
@@ -22,12 +23,15 @@ AppBar myAppBar(BuildContext context, String text) {
       leadingWidth: MediaQuery.of(context).size.width * 0.2,
       leading: Align(
           alignment: Alignment.bottomLeft,
-          child: Container(
-              height: AppBar().preferredSize.height,
-              color: Colors.white,
-              child: Image.asset(
-                "image/tv.png",
-              ))),
+          child: GestureDetector(
+            onTap: () => Navigator.pushReplacementNamed(context,Home.routeName),
+            child: Container(
+                height: AppBar().preferredSize.height,
+                color: Colors.white,
+                child: Image.asset(
+                  "image/tv.png",
+                )),
+          )),
       centerTitle: true,
       backgroundColor: Theme.of(context).primaryColor,
       title: animatedText(
