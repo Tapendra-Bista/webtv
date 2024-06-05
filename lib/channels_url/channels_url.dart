@@ -63,7 +63,7 @@ const List<Map<String, String>> channelList = [
     'url': 'https://stream.crichd.vip/update/espnus.php',
   },
   {
-    'name': "TnT Sports",
+    'name': "TNT Sports",
     'image': "image/tnt.jpg",
     'url': 'https://stream.crichd.vip/update/bt1.php',
   },
@@ -73,7 +73,7 @@ const List<Map<String, String>> channelList = [
     'url': 'https://stream.crichd.vip/update/espnus.php',
   },
   {
-    'name': "Super Sricket",
+    'name': "Super Cricket",
     'image': "image/s.jpg",
     'url': 'https://stream.crichd.vip/update/sscricket.php',
   },
@@ -81,6 +81,11 @@ const List<Map<String, String>> channelList = [
     'name': "Viaplay Sports 1",
     'image': "image/via.jpg",
     'url': 'https://stream.crichd.vip/update/premier.php',
+  },
+    {
+    'name': "Super Rugby",
+    'image': "image/ru.png",
+    'url': 'https://stream.crichd.vip/update/ssrugby.php',
   },
   {
     'name': "Super Sports Football",

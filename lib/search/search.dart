@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:search_page/search_page.dart';
+import 'package:webtv/play/play.dart';
+import 'package:webtv/provider/provider.dart';
 
 class ChannelSearch {
   final String name;
@@ -40,21 +43,33 @@ Future mechanisimToSearch(BuildContext context) {
             "No result !",
             style: Theme.of(context).textTheme.headlineMedium,
           )),
-          builder: (channelSearch) => Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    channelSearch.imageUrl,
-                    fit: BoxFit.contain,
-                    height: 50,
-                    width: 50,
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  Text(channelSearch.name,
-                      style: Theme.of(context).textTheme.headlineMedium),
-                ],
+          builder: (channelSearch) => GestureDetector(
+                onTap: () {
+                  try {
+                    Navigator.pushReplacementNamed(context, Play.routeName);
+                    context.read<ChannelProvider>().updated(
+                        channelurl: channelSearch.url.toString(),
+                        channelname: channelSearch.name.toString());
+                  } catch (exception) {
+                    debugPrint("error in ontap : ${exception.toString()}");
+                  }
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      channelSearch.imageUrl,
+                      fit: BoxFit.contain,
+                      height: 50,
+                      width: 50,
+                    ),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    Text(channelSearch.name,
+                        style: Theme.of(context).textTheme.headlineMedium),
+                  ],
+                ),
               ),
           filter: (channelSearch) => [
                 channelSearch.name,
