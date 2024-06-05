@@ -13,6 +13,12 @@ class ChannelSearch {
 
 List<ChannelSearch> channelSearch = [];
 
+void addingItem(List<ChannelSearch> l1, List<Map<String, String>> l2) {
+  for (int i = 0; i < l2.length; i++) {
+    l1.add(ChannelSearch(l2[i]['name']!, l2[i]['url']!, l2[i]['image']!));
+  }
+}
+
 Future mechanisimToSearch(BuildContext context) {
   return showSearch(
       context: context,

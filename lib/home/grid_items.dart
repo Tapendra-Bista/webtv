@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 import 'package:webtv/channel_design/channel.dart';
 import 'package:webtv/play/play.dart';
 import 'package:webtv/provider/provider.dart';
-import 'package:webtv/search/search.dart';
 
 class GridItems extends StatelessWidget {
   const GridItems(
@@ -30,8 +29,7 @@ class GridItems extends StatelessWidget {
               crossAxisSpacing: 20,
               crossAxisCount: itemNumber == 1 ? 2 : itemNumber),
           itemBuilder: (BuildContext context, int index) {
-            channelSearch.add(ChannelSearch(myList[index]['name'],
-                myList[index]['url'], myList[index]['image']));
+           
 
             return GestureDetector(
               onTap: () {

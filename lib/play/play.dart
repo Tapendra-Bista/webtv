@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:webtv/decoration/myappbar.dart';
+import 'package:webtv/decoration/ani_text.dart';
 import 'package:webtv/footer/footer.dart';
+import 'package:webtv/home/home.dart';
 import 'package:webtv/iframe/iframe.dart';
 import 'package:webtv/provider/provider.dart';
 
@@ -23,7 +24,31 @@ class _PlayState extends State<Play> {
     var primaryColor = Theme.of(context).primaryColor; // calling primary color
     // calling provider void function from channel provider
     return Scaffold(
-      appBar: myAppBar(context, context.watch<ChannelProvider>().channelName!),
+      appBar: AppBar(
+
+          // appbar with custom design
+          leadingWidth: MediaQuery.of(context).size.width * 0.2,
+          leading: Align(
+              alignment: Alignment.bottomLeft,
+              child: GestureDetector(
+                onTap: () =>
+                    Navigator.pushReplacementNamed(context, Home.routeName),
+                child: Container(
+                    height: AppBar().preferredSize.height,
+                    color: Colors.white,
+                    child: Image.asset(
+                      "image/tv.png",
+                    )),
+              )),
+          centerTitle: true,
+          backgroundColor: Theme.of(context).primaryColor,
+          title: animatedText(
+            context.watch<ChannelProvider>().channelName!,
+            Theme.of(context).textTheme.headlineMedium!.copyWith(
+                color: Colors.white,
+                fontWeight: FontWeight.normal,
+                fontSize: AppBar().preferredSize.height / 2),
+          )),
       body: NotificationListener<OverscrollIndicatorNotification>(
         onNotification: (notification) {
           notification.disallowIndicator();
