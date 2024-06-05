@@ -14,13 +14,13 @@ const List<Map<String, String>> footballChannelList = [
   },
 
   {
-    'name': "Ten 1",
+    'name': "Sony Ten 1",
     'image': "image/ten1.png",
     'url': 'https://stream.crichd.vip/update/ten1.php',
   },
 
   {
-    'name': "Spotrs Tv1",
+    'name': "Sports Tv1",
     'image': "image/1.jpg",
     'url': 'https://stream.crichd.vip/update/espnus.php',
   },
@@ -42,7 +42,7 @@ const List<Map<String, String>> footballChannelList = [
     'url': 'https://stream.crichd.vip/update/premier.php',
   },
   {
-    'name': "Super Sports Football",
+    'name': "Super Football",
     'image': "image/ssfootball.png",
     'url': 'https://stream.crichd.vip/update/ssfotbal.php',
   },

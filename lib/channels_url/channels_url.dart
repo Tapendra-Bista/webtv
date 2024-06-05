@@ -7,7 +7,7 @@ const List<Map<String, String>> channelList = [
     'url': 'https://stream.crichd.vip/update/skysfotb.php',
   },
   {
-    'name': "Sky Sports",
+    'name': "Sky Sports Cricket",
     'image': "image/sky.png",
     'url': 'https://stream.crichd.vip/update/skys2.php',
   },
@@ -43,7 +43,7 @@ const List<Map<String, String>> channelList = [
     'url': 'https://stream.crichd.vip/update/fox501.php',
   },
   {
-    'name': "Ten 1",
+    'name': "Sony Ten 1",
     'image': "image/ten1.png",
     'url': 'https://stream.crichd.vip/update/ten1.php',
   },
@@ -53,7 +53,7 @@ const List<Map<String, String>> channelList = [
     'url': 'https://stream.crichd.vip/update/tensp.php',
   },
   {
-    'name': "Spotrs Tv1",
+    'name': "Sports Tv1",
     'image': "image/1.jpg",
     'url': 'https://stream.crichd.vip/update/espnus.php',
   },
@@ -88,7 +88,7 @@ const List<Map<String, String>> channelList = [
     'url': 'https://stream.crichd.vip/update/ssrugby.php',
   },
   {
-    'name': "Super Sports Football",
+    'name': "Super Football",
     'image': "image/ssfootball.png",
     'url': 'https://stream.crichd.vip/update/ssfotbal.php',
   },

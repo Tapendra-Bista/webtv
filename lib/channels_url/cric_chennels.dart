@@ -3,7 +3,7 @@ const List<Map<String, String>> cricketChannelList = [
   // Url,image and name of channel
 
   {
-    'name': "Sky Sports",
+    'name': "Sky Sports Cricket",
     'image': "image/sky.png",
     'url': 'https://stream.crichd.vip/update/skys2.php',
   },
