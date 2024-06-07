@@ -40,7 +40,7 @@ class Footer extends StatelessWidget {  // bottom part or footer about disclaime
                      
                       
                 ])),
-                Center(child: Text("\n© jun-2024.all rights reserved. designed and developed by:webtv group",style: mytextStyle!.copyWith(fontSize:18, color:primaryColor,)))
+                Center(child: Text("\n© jun-2024.all rights reserved. designed and developed by: webtv group",style: mytextStyle!.copyWith(fontSize:18, color:primaryColor,)))
           ],
         ),
       ),
