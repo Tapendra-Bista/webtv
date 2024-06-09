@@ -12,7 +12,11 @@ const List<Map<String, String>> footballChannelList = [
     'image': "image/espn.jpg",
     'url': 'https://stream.crichd.vip/update/espnus.php',
   },
-
+ {
+    'name': "BBC ONE",
+    'image': "image/bbc.png",
+    'url': 'https://stream.crichd.vip/update/ch1.php',
+  },
   {
     'name': "Sony Ten 1",
     'image': "image/ten1.png",

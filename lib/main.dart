@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
         title: 'webtv',
         theme: myThemeData,
         routerDelegate: BeamerDelegate(
+          
             notFoundRedirectNamed: '/error',
             locationBuilder: RoutesLocationBuilder(routes: routes).call),
         routeInformationParser: BeamerParser(),

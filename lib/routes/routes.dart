@@ -23,6 +23,7 @@ var routes = {
         key: ValueKey('/home/cricket'),
         title: 'webtv',
         name: 'webtv',
+
         child: Cricket(), // widget
       ),
   "/home/football": (context, state, data) => const BeamPage(
