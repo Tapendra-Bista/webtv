@@ -7,6 +7,7 @@ import 'package:universal_html/html.dart';
 class ChannelProvider extends ChangeNotifier {
   String? channelName;
   String? channelUrl;
+
   Widget? widget;
   final IFrameElement _iFrameElement = IFrameElement();
   ChannelProvider({
@@ -21,6 +22,11 @@ class ChannelProvider extends ChangeNotifier {
   }) async {
     channelName = channelname;
     channelUrl = channelurl;
+
+    notifyListeners();
+  }
+
+  void tv() {
     _iFrameElement.style.height = '80%';
     _iFrameElement.style.width = '100%';
     _iFrameElement.style.border = 'none';

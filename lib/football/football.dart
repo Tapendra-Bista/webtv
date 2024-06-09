@@ -8,7 +8,7 @@ import 'package:webtv/footer/footer.dart';
 import 'package:webtv/home/grid_items.dart';
 
 class Football extends StatefulWidget {
-  static const routeName = "/Football";
+
   const Football({super.key});
 
   @override
@@ -57,6 +57,7 @@ class _FootballState extends State<Football> {
                   ),
                 ),
                 GridItems(
+                  adressUrl: "/home/football/play",
                   itemNumber: itemNumber,
                   mytextStyle: mytextStyle,
                   myList: footballChannelList,

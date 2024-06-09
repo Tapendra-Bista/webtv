@@ -1,8 +1,6 @@
+import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
-import 'package:webtv/all_sports/all_sports.dart';
-import 'package:webtv/cricket/cricket.dart';
 import 'package:webtv/decoration/btnstyle.dart';
-import 'package:webtv/football/football.dart';
 
 class Category extends StatelessWidget {
   // top part which distinguish app sport,cricket and football
@@ -33,7 +31,8 @@ class Category extends StatelessWidget {
                 ),
                 style: buttonStyle,
                 onPressed: () {
-                  Navigator.pushNamed(context, AllSports.routeName);
+           
+                  Beamer.of(context).beamToNamed("/home/all_sports");
                 },
                 label: Text("All Sports", style: mytextStyle)),
           ),
@@ -49,7 +48,8 @@ class Category extends StatelessWidget {
                 ),
                 style: buttonStyle,
                 onPressed: () {
-                  Navigator.pushNamed(context, Cricket.routeName);
+                  
+                  Beamer.of(context).beamToNamed('/home/cricket');
                 },
                 label: Text("Cricket", style: mytextStyle)),
           ),
@@ -65,7 +65,7 @@ class Category extends StatelessWidget {
                 ),
                 style: buttonStyle,
                 onPressed: () {
-                  Navigator.pushNamed(context, Football.routeName);
+                  Beamer.of(context).beamToNamed('/home/football');
                 },
                 label: Text("Football", style: mytextStyle)),
           ),

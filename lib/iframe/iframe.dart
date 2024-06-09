@@ -12,6 +12,7 @@ class IframeScreen extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         child: Consumer<ChannelProvider>(
           builder: (context, value, child) {
+            value.tv();
             return value.widget!;
           },
         ));

@@ -1,7 +1,7 @@
+import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:search_page/search_page.dart';
-import 'package:webtv/play/play.dart';
 import 'package:webtv/provider/provider.dart';
 
 class ChannelSearch {
@@ -46,13 +46,14 @@ Future mechanisimToSearch(BuildContext context) {
           searchLabel: "Channel name",
           failure: Center(
               child: Text(
-            "No result !",
+            "No Result !",
             style: Theme.of(context).textTheme.headlineMedium,
           )),
           builder: (channelSearch) => GestureDetector(
                 onTap: () {
                   try {
-                    Navigator.pushReplacementNamed(context, Play.routeName);
+                    Beamer.of(context).beamToNamed(
+                        "/search/play/${channelSearch.url.toString().replaceFirst("https://stream.crichd.vip/", '')}/${channelSearch.name.toString()}");
                     context.read<ChannelProvider>().updated(
                         channelurl: channelSearch.url.toString(),
                         channelname: channelSearch.name.toString());

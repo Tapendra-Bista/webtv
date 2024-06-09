@@ -9,7 +9,7 @@ import 'package:webtv/home/grid_items.dart';
 
 
 class AllSports extends StatefulWidget {
-  static const routeName = "/AllSports";
+
   const AllSports({super.key});
 
   @override
@@ -57,7 +57,9 @@ class _AllSportsState extends State<AllSports> {
                     style: mytextStyle.copyWith(fontSize: 14),
                   ),
                 ),
-               GridItems(itemNumber: itemNumber, mytextStyle: mytextStyle,myList:channelList,),
+               GridItems(
+               adressUrl: "/home/all_sports/play",
+                itemNumber: itemNumber, mytextStyle: mytextStyle,myList:channelList,),
                 const SizedBox(
                   height: 30,
                 ),

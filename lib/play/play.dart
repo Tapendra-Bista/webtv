@@ -1,19 +1,22 @@
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:webtv/decoration/ani_text.dart';
 import 'package:webtv/footer/footer.dart';
-import 'package:webtv/home/home.dart';
 import 'package:webtv/iframe/iframe.dart';
 import 'package:webtv/provider/provider.dart';
 
+
+
 class Play extends StatefulWidget {
-  static const routeName = "/Play";
-  const Play({
-    super.key,
-  });
+  const Play({super.key});
+
+
 
   @override
   State<Play> createState() => _PlayState();
+
+  static firstWhereOrNull(bool Function(dynamic book) param0) {}
 }
 
 // context.watch<ChannelProvider>().channelName!,
@@ -33,7 +36,7 @@ class _PlayState extends State<Play> {
               alignment: Alignment.bottomLeft,
               child: GestureDetector(
                 onTap: () =>
-                    Navigator.pushReplacementNamed(context, Home.routeName),
+                    Navigator.pushReplacementNamed(context,"/home"),
                 child: Container(
                     height: AppBar().preferredSize.height,
                     color: Colors.white,

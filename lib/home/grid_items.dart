@@ -1,19 +1,27 @@
+import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:webtv/channel_design/channel.dart';
-import 'package:webtv/play/play.dart';
 import 'package:webtv/provider/provider.dart';
 
-class GridItems extends StatelessWidget {
+class GridItems extends StatefulWidget {
   const GridItems(
       {super.key,
       required this.itemNumber,
       required this.mytextStyle,
-      required this.myList});
+      required this.myList,
+      required this.adressUrl});
 
   final int itemNumber;
   final TextStyle? mytextStyle;
   final List myList;
+  final String adressUrl;
+
+  @override
+  State<GridItems> createState() => _GridItemsState();
+}
+
+class _GridItemsState extends State<GridItems> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -22,27 +30,27 @@ class GridItems extends StatelessWidget {
           // for channel list
           shrinkWrap: true,
           physics: const ScrollPhysics(parent: NeverScrollableScrollPhysics()),
-          itemCount: myList.length,
+          itemCount: widget.myList.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               mainAxisSpacing: 20,
               childAspectRatio: 1,
               crossAxisSpacing: 20,
-              crossAxisCount: itemNumber == 1 ? 2 : itemNumber),
+              crossAxisCount: widget.itemNumber == 1 ? 2 : widget.itemNumber),
           itemBuilder: (BuildContext context, int index) {
-           
-
             return GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, Play.routeName);
+                Beamer.of(context).beamToNamed(
+                    "${widget.adressUrl}/${widget.myList[index]['url']!.replaceFirst("https://stream.crichd.vip/", '')}/${widget.myList[index]['name']!}");
+
                 context.read<ChannelProvider>().updated(
-                    channelurl: myList[index]['url']!,
-                    channelname: myList[index]['name']!);
+                    channelurl: widget.myList[index]['url']!,
+                    channelname: widget.myList[index]['name']!);
               },
               child: Channel(
                   // channel property imageurl,imagename
-                  mytextStyle: mytextStyle,
-                  channelName: myList[index]['name']!,
-                  imageUrl: myList[index]['image']!),
+                  mytextStyle: widget.mytextStyle,
+                  channelName: widget.myList[index]['name']!,
+                  imageUrl: widget.myList[index]['image']!),
             );
           }),
     );

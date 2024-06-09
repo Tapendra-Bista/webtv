@@ -8,11 +8,13 @@ import 'package:webtv/home/grid_items.dart';
 import 'package:webtv/search/search.dart';
 
 class Home extends StatefulWidget {
-  static const routeName = "/home";
+
   const Home({super.key});
 
   @override
   State<Home> createState() => _HomeState();
+
+  static getArticlePage(String match) {}
 }
 
 class _HomeState extends State<Home> {
@@ -88,6 +90,7 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 GridItems(
+                  adressUrl:"/home/play",
                   itemNumber: itemNumber,
                   mytextStyle: mytextStyle,
                   myList: channelList,

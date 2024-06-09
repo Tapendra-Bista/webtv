@@ -1,6 +1,6 @@
+import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
 import 'package:webtv/decoration/ani_text.dart';
-import 'package:webtv/home/home.dart';
 import 'package:webtv/search/search.dart';
 
 AppBar myAppBar(BuildContext context, String text) {
@@ -24,7 +24,7 @@ AppBar myAppBar(BuildContext context, String text) {
       leading: Align(
           alignment: Alignment.bottomLeft,
           child: GestureDetector(
-            onTap: () => Navigator.pushReplacementNamed(context,Home.routeName),
+            onTap: () =>context.beamToReplacementNamed('/home'),
             child: Container(
                 height: AppBar().preferredSize.height,
                 color: Colors.white,

@@ -1,14 +1,14 @@
 import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:webtv/category/category.dart';
 import 'package:webtv/channels_url/cric_chennels.dart';
-
 import 'package:webtv/decoration/myappbar.dart';
 import 'package:webtv/footer/footer.dart';
 import 'package:webtv/home/grid_items.dart';
 
 class Cricket extends StatefulWidget {
-  static const routeName = "/Cricket";
+
   const Cricket({
     super.key,
   });
@@ -59,6 +59,7 @@ class _CricketState extends State<Cricket> {
                   ),
                 ),
                 GridItems(
+                  adressUrl: "/home/cricket/play",
                   itemNumber: itemNumber,
                   mytextStyle: mytextStyle,
                   myList: cricketChannelList,
