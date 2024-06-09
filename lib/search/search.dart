@@ -51,15 +51,7 @@ Future mechanisimToSearch(BuildContext context) {
           )),
           builder: (channelSearch) => GestureDetector(
                 onTap: () {
-                  try {
-                    Beamer.of(context).beamToNamed(
-                        "/search/play/${channelSearch.url.toString().replaceFirst("https://stream.crichd.vip/", '')}/${channelSearch.name.toString()}");
-                    context.read<ChannelProvider>().updated(
-                        channelurl: channelSearch.url.toString(),
-                        channelname: channelSearch.name.toString());
-                  } catch (exception) {
-                    debugPrint("error in ontap : ${exception.toString()}");
-                  }
+                  onTapFunction(context, channelSearch);
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -82,4 +74,16 @@ Future mechanisimToSearch(BuildContext context) {
                 channelSearch.name,
               ],
           items: channelSearch));
+}
+
+void onTapFunction(BuildContext context, channelSearch) {
+  try {
+    Beamer.of(context).beamToNamed(
+        "/search/play/${channelSearch.url.toString().replaceFirst("https://stream.crichd.vip/", '')}/${channelSearch.name.toString()}");
+    context.read<ChannelProvider>().updated(
+        channelurl: channelSearch.url.toString(),
+        channelname: channelSearch.name.toString());
+  } catch (exception) {
+    debugPrint("error in ontap : ${exception.toString()}");
+  }
 }

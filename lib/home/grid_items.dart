@@ -39,12 +39,7 @@ class _GridItemsState extends State<GridItems> {
           itemBuilder: (BuildContext context, int index) {
             return GestureDetector(
               onTap: () {
-                Beamer.of(context).beamToNamed(
-                    "${widget.adressUrl}/${widget.myList[index]['url']!.replaceFirst("https://stream.crichd.vip/", '')}/${widget.myList[index]['name']!}");
-
-                context.read<ChannelProvider>().updated(
-                    channelurl: widget.myList[index]['url']!,
-                    channelname: widget.myList[index]['name']!);
+                navigationFunction(index);
               },
               child: Channel(
                   // channel property imageurl,imagename
@@ -54,5 +49,18 @@ class _GridItemsState extends State<GridItems> {
             );
           }),
     );
+  }
+
+  void navigationFunction(int index) {
+    try {
+      Beamer.of(context).beamToNamed(
+          "${widget.adressUrl}/${widget.myList[index]['url']!.replaceFirst("https://stream.crichd.vip/", '')}/${widget.myList[index]['name']!}");
+
+      context.read<ChannelProvider>().updated(
+          channelurl: widget.myList[index]['url']!,
+          channelname: widget.myList[index]['name']!);
+    } catch (exception) {
+      debugPrint(exception.toString());
+    }
   }
 }

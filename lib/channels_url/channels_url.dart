@@ -115,6 +115,16 @@ const List<Map<String, String>> channelList = [
     'url': 'https://stream.crichd.vip/update/euro1.php',
   },
     {
+    'name': "Sky Sports Arena",
+    'image': "image/arena.jpg",
+    'url': 'https://stream.crichd.vip/update/skysarena.php',
+  },
+
+
+
+
+
+    {
     'name': "Euro Sports 2",
     'image': "image/euro2.png",
     'url': 'https://stream.crichd.vip/update/euro2.php',
