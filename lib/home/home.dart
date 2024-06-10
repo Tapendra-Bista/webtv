@@ -26,6 +26,7 @@ class _HomeState extends State<Home> {
 
     return Scaffold(
       appBar: AppBar(
+   
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 30),
