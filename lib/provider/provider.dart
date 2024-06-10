@@ -4,16 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:universal_html/html.dart';
 
 // model
+
 class ChannelProvider extends ChangeNotifier {
   String? channelName;
   String? channelUrl;
-
   Widget? widget;
   final IFrameElement _iFrameElement = IFrameElement();
-  ChannelProvider({
-    this.channelName = "Ptv sports",
-    this.channelUrl = 'https://stream.crichd.vip/update/ptv.php',
-  });
+  ChannelProvider(
+      {this.channelName = "Sky Sports Football",
+      this.channelUrl = 'https://stream.crichd.vip/update/skysfotb.php'}) ;
+
+  
 
   void updated({
     // function to get  update name,url from list
@@ -22,26 +23,27 @@ class ChannelProvider extends ChangeNotifier {
   }) async {
     channelName = channelname;
     channelUrl = channelurl;
-
-    notifyListeners();
-  }
-
-  void tv() {
-    _iFrameElement.style.height = '80%';
+        _iFrameElement.style.height = '80%';
     _iFrameElement.style.width = '100%';
     _iFrameElement.style.border = 'none';
-    _iFrameElement.allowFullscreen = true;
+debugPrint(channelurl.toString());
     _iFrameElement.src = channelUrl;
-// ignore: undefined_prefixed_name
-    ui.platformViewRegistry.registerViewFactory(
-      'iframeElement',
-      (int viewId) => _iFrameElement,
-    );
+    _iFrameElement.allowFullscreen = true;
 
-    widget = HtmlElementView(
-      viewType: 'iframeElement',
-      key: UniqueKey(),
-    );
+    try {
+      ui.platformViewRegistry.registerViewFactory(
+        'iframeElement',
+        (int viewId) => _iFrameElement,
+      );
+      widget = HtmlElementView(
+        viewType: 'iframeElement',
+        key: UniqueKey(),
+      );
+    } catch (ex) {
+      debugPrint("Error in widget at Iframe :$ex");
+    }
+  
+    
     notifyListeners();
   }
 }

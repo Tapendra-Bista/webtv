@@ -24,6 +24,7 @@ class GridItems extends StatefulWidget {
 class _GridItemsState extends State<GridItems> {
   @override
   Widget build(BuildContext context) {
+   
     return SizedBox(
       width: double.infinity,
       child: GridView.builder(
@@ -53,6 +54,7 @@ class _GridItemsState extends State<GridItems> {
 
   void navigationFunction(int index) {
     try {
+     
       Beamer.of(context).beamToNamed(
           "${widget.adressUrl}/${widget.myList[index]['url']!.replaceFirst("https://stream.crichd.vip/", '')}/${widget.myList[index]['name']!}");
 

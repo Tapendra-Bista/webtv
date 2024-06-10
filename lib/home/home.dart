@@ -8,18 +8,16 @@ import 'package:webtv/home/grid_items.dart';
 import 'package:webtv/search/search.dart';
 
 class Home extends StatefulWidget {
-
   const Home({super.key});
 
   @override
   State<Home> createState() => _HomeState();
-
-  static getArticlePage(String match) {}
 }
 
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
+         
     var mytextStyle =
         Theme.of(context).textTheme.headlineMedium; // calling text theme
     var primaryColor = Theme.of(context).primaryColor; // calling primary color
@@ -90,7 +88,7 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 GridItems(
-                  adressUrl:"/home/play",
+                  adressUrl: "/home/play",
                   itemNumber: itemNumber,
                   mytextStyle: mytextStyle,
                   myList: channelList,

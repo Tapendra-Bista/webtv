@@ -78,7 +78,7 @@ Future mechanisimToSearch(BuildContext context) {
 
 void onTapFunction(BuildContext context, channelSearch) {
   try {
-    Beamer.of(context).beamToNamed(
+    Beamer.of(context).beamToReplacementNamed(
         "/search/play/${channelSearch.url.toString().replaceFirst("https://stream.crichd.vip/", '')}/${channelSearch.name.toString()}");
     context.read<ChannelProvider>().updated(
         channelurl: channelSearch.url.toString(),

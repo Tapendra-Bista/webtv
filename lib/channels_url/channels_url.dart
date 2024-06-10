@@ -161,5 +161,10 @@ const List<Map<String, String>> channelList = [
     'image': "image/grand.png",
     'url': 'https://stream.crichd.vip/update/ssgrandstand.php',
   },
+   {
+    'name': "BBC TWO",
+    'image': "image/bbc2.png",
+    'url': 'https://stream.crichd.vip/update/ch5.php',
+  },
 ];
 

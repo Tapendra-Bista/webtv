@@ -10,6 +10,7 @@ import 'package:webtv/theme/theme.dart';
 
 void main() {
   setPathUrlStrategy();
+
   runApp(const MyApp());
 }
 
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => ChannelProvider()),
+        
       ],
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
