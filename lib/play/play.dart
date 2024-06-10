@@ -87,7 +87,7 @@ class _PlayState extends State<Play> {
                       // watch provider or to get data from provider'
                       builder: (context, value, child) {
                     return Text(
-                      "Your are watching ${value.channelName} now !!!",
+                      "You are watching ${value.channelName} now !!!",
                       style: mytextStyle.copyWith(fontSize: 14),
                     );
                   }),
