@@ -166,5 +166,10 @@ const List<Map<String, String>> channelList = [
     'image': "image/bbc2.png",
     'url': 'https://stream.crichd.vip/update/ch5.php',
   },
+      {
+    'name': "Sky Sports NZ",
+    'image': "image/sky3.png",
+    'url': 'https://stream.crichd.vip/update/sky3nz.php',
+  },
 ];
 
