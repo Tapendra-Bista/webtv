@@ -12,6 +12,11 @@ const List<Map<String, String>> footballChannelList = [
     'image': "image/espn.jpg",
     'url': 'https://stream.crichd.vip/update/espnus.php',
   },
+       {
+    'name': "Super Maximo 1",
+    'image': "image/maxi1.png",
+    'url': 'https://stream.crichd.vip/update/ssmeximo.php',
+  },
  {
     'name': "BBC ONE",
     'image': "image/bbc.png",
@@ -62,7 +67,11 @@ const List<Map<String, String>> footballChannelList = [
     'image': "image/euro1.jpg",
     'url': 'https://stream.crichd.vip/update/euro1.php',
   },
-
+     {
+    'name': "Super Tennis",
+    'image': "image/tennis.png",
+    'url': 'https://stream.crichd.vip/update/sstennis.php',
+  },
   {
     'name': "Sky Sports Mix",
     'image': "image/mix.jpg",

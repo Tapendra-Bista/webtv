@@ -120,7 +120,11 @@ const List<Map<String, String>> channelList = [
     'url': 'https://stream.crichd.vip/update/skysarena.php',
   },
 
-
+  {
+    'name': "TNT Sports 4",
+    'image': "image/tnt4.png",
+    'url': 'https://stream.crichd.vip/update/espn.php.php',
+  },
 
 
 
@@ -170,6 +174,11 @@ const List<Map<String, String>> channelList = [
     'name': "Sky Sports NZ",
     'image': "image/sky3.png",
     'url': 'https://stream.crichd.vip/update/sky3nz.php',
+  },
+      {
+    'name': "Super Maximo 1",
+    'image': "image/maxi1.png",
+    'url': 'https://stream.crichd.vip/update/ssmeximo.php',
   },
 ];
 
