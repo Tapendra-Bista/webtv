@@ -139,7 +139,11 @@ const List<Map<String, String>> channelList = [
     'image': "image/bbc.png",
     'url': 'https://stream.crichd.vip/update/ch1.php',
   },
-
+     {
+    'name': "Super Tennis",
+    'image': "image/tennis.png",
+    'url': 'https://stream.crichd.vip/update/sstennis.php',
+  },
   {
     'name': "Sky Sports F1",
     'image': "image/f1.png",

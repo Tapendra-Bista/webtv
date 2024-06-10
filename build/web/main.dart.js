@@ -383,7 +383,7 @@ at5(a){var s,r,q=a.graphemeLayoutBounds,p=B.b.ee(q,t.i)
 q=p.a
 s=J.aJ(q)
 r=p.$ti.y[1]
-return new A.iU(new A.t(r.a(s.h(q,0)),r.a(s.h(q,1)),r.a(s.h(q,2)),r.a(s.h(q,3))),new A.br(B.c.aa(a.graphemeClusterTextRange.start),B.c.aa(a.graphemeClusterTextRange.end)),B.jj[B.c.aa(a.dir.value)])},
+return new A.iU(new A.t(r.a(s.h(q,0)),r.a(s.h(q,1)),r.a(s.h(q,2)),r.a(s.h(q,3))),new A.br(B.c.aa(a.graphemeClusterTextRange.start),B.c.aa(a.graphemeClusterTextRange.end)),B.jk[B.c.aa(a.dir.value)])},
 aEb(a,b,c,d,e){return t.e.a({width:e,height:d,colorType:c,alphaType:a,colorSpace:b})},
 aJf(a){var s,r="chromium/canvaskit.js"
 switch(a.a){case 0:s=A.b([],t.s)
@@ -7852,7 +7852,7 @@ j=1}else j=3
 q.a=k+n
 s+=j
 r=s
-p=!0}else if(o<127&&(B.EA[o>>>4]&1<<(o&15))!==0){if(p&&65<=o&&90>=o){if(q==null)q=new A.ci("")
+p=!0}else if(o<127&&(B.Ez[o>>>4]&1<<(o&15))!==0){if(p&&65<=o&&90>=o){if(q==null)q=new A.ci("")
 if(r<s){q.a+=B.d.a7(a,r,s)
 r=s}p=!1}++s}else if(o<=93&&(B.n5[o>>>4]&1<<(o&15))!==0)A.uL(a,s,"Invalid character")
 else{if((o&64512)===55296&&s+1<c){i=a.charCodeAt(s+1)
@@ -7884,7 +7884,7 @@ if(a==="https")return"https"
 if(a==="package")return"package"
 return a},
 auv(a,b,c){if(a==null)return""
-return A.Ee(a,b,c,B.Ed,!1,!1)},
+return A.Ee(a,b,c,B.Ec,!1,!1)},
 ajz(a,b,c,d,e,f){var s,r=e==="file",q=r||f
 if(a==null)return r?"/":""
 else s=A.Ee(a,b,c,B.n4,!0,!0)
@@ -16805,7 +16805,7 @@ CQ:function CQ(){},
 T8:function T8(){},
 asN(a,b){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e=null,d={}
 d.a=b
-if(a==null)a=B.jl
+if(a==null)a=B.jm
 s=J.aJ(a)
 r=s.gA(a)-1
 q=A.bn(0,e,!1,t.LQ)
@@ -16957,7 +16957,7 @@ q.gyJ()
 p.syJ(q.gyJ())
 q.gyK()
 p.syK(q.gyK())
-r.kP(0,B.jl,p)
+r.kP(0,B.jm,p)
 r.saX(0,b.gaX(b))
 r.sbP(0,b.gbP(b))
 r.dy=b.gamo()
@@ -25404,7 +25404,7 @@ alR:function alR(){},
 alS:function alS(){},
 alT:function alT(){},
 aIb(a,b){var s,r,q,p
-for(s=0;s<34;++s){r=b[s].h(0,"name")
+for(s=0;s<35;++s){r=b[s].h(0,"name")
 r.toString
 q=b[s].h(0,"url")
 q.toString
@@ -26304,7 +26304,7 @@ return!1},
 k(a){return"ColorFilter.mode("+A.i(this.a)+", "+this.b.k(0)+")"}}
 A.vY.prototype={
 ga7I(){var s,r,q=new Float32Array(20)
-for(s=this.a,r=0;r<20;++r)if(B.b.t(B.EC,r))q[r]=s[r]/255
+for(s=this.a,r=0;r<20;++r)if(B.b.t(B.EB,r))q[r]=s[r]/255
 else q[r]=s[r]
 return q},
 Cw(){return $.bm.bm().ColorFilter.MakeMatrix(this.ga7I())},
@@ -28115,7 +28115,7 @@ It(a){var s,r,q,p,o,n,m,l=A.b([],t.Lx)
 for(s=a.a,r=J.aJ(s),q=a.$ti.y[1],p=0;p<r.gA(s);++p){o=q.a(r.h(s,p))
 n=o.rect
 m=B.c.aa(o.dir.value)
-l.push(new A.dx(n[0],n[1],n[2],n[3],B.jj[m]))}return l},
+l.push(new A.dx(n[0],n[1],n[2],n[3],B.jk[m]))}return l},
 e7(a){var s,r=this.a
 r===$&&A.a()
 r=r.a.getGlyphPositionAtCoordinate(a.a,a.b)
@@ -37552,7 +37552,7 @@ n=A.fY(r.h(s,"fontWeightIndex"))
 m=n!=null?A.aoD(n):"normal"
 l=A.auK(r.h(s,"fontSize"))
 if(l==null)l=null
-q=new A.abB(new A.a0F(l,m,A.cz(r.h(s,"fontFamily")),B.Eu[p],B.jj[o]))
+q=new A.abB(new A.a0F(l,m,A.cz(r.h(s,"fontFamily")),B.Et[p],B.jk[o]))
 break
 case"TextInput.clearClient":q=B.AJ
 break
@@ -65602,7 +65602,7 @@ q.x2=c.p1
 q.xr=c.p2
 q.y1=c.p3
 q.z=c.b
-q.a9M(b==null?B.jl:b)
+q.a9M(b==null?B.jm:b)
 if(s!==r)q.Pf()},
 Hz(a,b){return this.kP(0,null,b)},
 VC(){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a,a0,a1,a2,a3,a4,a5,a6,a7=this,a8={}
@@ -79785,7 +79785,7 @@ return A.aCw(s,r)},
 a5D(){if(this.x)return
 this.wz()},
 VB(){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d=this,c=null,b=d.c
-if(b===-1||d.d===-1||d.b.length===0)return new A.ml(c,c,B.di,B.jk,d.b.length!==0)
+if(b===-1||d.d===-1||d.b.length===0)return new A.ml(c,c,B.di,B.jl,d.b.length!==0)
 if(!d.as){b=d.JH(d.d,b)
 d.d=b
 d.c=d.JH(d.c,b)}s=J.iD(d.b[d.d])
@@ -83334,7 +83334,7 @@ A.vb.prototype={
 al(){return new A.NX(B.k)}}
 A.NX.prototype={
 L(a){var s=null,r=A.a_(a).p2.e,q=A.a_(a),p=A.bB(a,s,t.l).w.a,o=Math.min(5,B.c.aa(p.a/200))
-return A.rT(A.aoS(a,"All Sports"),new A.cm(new A.acH(),A.Mc(new A.bQ(B.dQ,A.lo(A.b([new A.bQ(B.bZ,A.cx("Live Tv Channels Online Free Free Free",s,s,s,r.hX(25),s,s),s),new A.nw(p,q.fr,r,s),new A.bQ(B.bZ,A.cx(u.N,s,s,s,r.hX(14),s,s),s),new A.lF(o,r,B.jm,"/home/all_sports/play",s),B.hA,new A.lB(r,s),B.ew],t.E),B.aX,B.bd,B.by),s)),s,t.eq))}}
+return A.rT(A.aoS(a,"All Sports"),new A.cm(new A.acH(),A.Mc(new A.bQ(B.dQ,A.lo(A.b([new A.bQ(B.bZ,A.cx("Live Tv Channels Online Free Free Free",s,s,s,r.hX(25),s,s),s),new A.nw(p,q.fr,r,s),new A.bQ(B.bZ,A.cx(u.N,s,s,s,r.hX(14),s,s),s),new A.lF(o,r,B.jj,"/home/all_sports/play",s),B.hA,new A.lB(r,s),B.ew],t.E),B.aX,B.bd,B.by),s)),s,t.eq))}}
 A.acH.prototype={
 $1(a){a.c=!1
 return!0},
@@ -83374,7 +83374,7 @@ A.xa.prototype={
 al(){return new A.Qm(B.k)}}
 A.Qm.prototype={
 L(a){var s=null,r=A.a_(a).p2.e,q=A.a_(a),p=A.bB(a,s,t.l).w.a,o=Math.min(5,B.c.aa(p.a/200))
-return A.rT(A.aoS(a,"Football"),new A.cm(new A.af6(),A.Mc(new A.bQ(B.dQ,A.lo(A.b([new A.bQ(B.bZ,A.cx("Live Tv Channels Online Free Free Free",s,s,s,r.hX(25),s,s),s),new A.nw(p,q.fr,r,s),new A.bQ(B.bZ,A.cx(u.N,s,s,s,r.hX(14),s,s),s),new A.lF(o,r,B.Eb,"/home/football/play",s),B.hA,new A.lB(r,s),B.ew],t.E),B.aX,B.bd,B.by),s)),s,t.eq))}}
+return A.rT(A.aoS(a,"Football"),new A.cm(new A.af6(),A.Mc(new A.bQ(B.dQ,A.lo(A.b([new A.bQ(B.bZ,A.cx("Live Tv Channels Online Free Free Free",s,s,s,r.hX(25),s,s),s),new A.nw(p,q.fr,r,s),new A.bQ(B.bZ,A.cx(u.N,s,s,s,r.hX(14),s,s),s),new A.lF(o,r,B.ES,"/home/football/play",s),B.hA,new A.lB(r,s),B.ew],t.E),B.aX,B.bd,B.by),s)),s,t.eq))}}
 A.af6.prototype={
 $1(a){a.c=!1
 return!0},
@@ -83427,7 +83427,7 @@ A.QA.prototype={
 L(a){var s,r=null,q=A.a_(a).p2.e,p=A.a_(a),o=t.l,n=A.bB(a,r,o).w.a,m=Math.min(5,B.c.aa(n.a/200)),l=t.E,k=A.b([new A.bQ(B.mj,A.IA(r,B.mT,new A.afA(a),r,r),r)],l)
 o=A.bB(a,r,o).w
 s=A.jF(r,A.ID("image/tv.png",r,r,r),B.v,B.j,r,100,r,r,r)
-return A.rT(A.nl(k,!1,A.a_(a).fr,r,!0,r,new A.hI(B.i4,r,r,s,r),o.a.a*0.2,r),new A.cm(new A.afB(),A.Mc(new A.bQ(B.dQ,A.lo(A.b([new A.bQ(B.bZ,A.cx("Live Tv Channels Online Free Free Free",r,r,r,q.hX(25),r,r),r),new A.nw(n,p.fr,q,r),new A.bQ(B.bZ,A.hO(A.cx(u.N,r,r,r,q.hX(14),r,r),r,r),r),new A.lF(m,q,B.jm,"/home/play",r),B.hA,new A.lB(q,r),B.ew],l),B.aX,B.bd,B.by),r)),r,t.eq))}}
+return A.rT(A.nl(k,!1,A.a_(a).fr,r,!0,r,new A.hI(B.i4,r,r,s,r),o.a.a*0.2,r),new A.cm(new A.afB(),A.Mc(new A.bQ(B.dQ,A.lo(A.b([new A.bQ(B.bZ,A.cx("Live Tv Channels Online Free Free Free",r,r,r,q.hX(25),r,r),r),new A.nw(n,p.fr,q,r),new A.bQ(B.bZ,A.hO(A.cx(u.N,r,r,r,q.hX(14),r,r),r,r),r),new A.lF(m,q,B.jj,"/home/play",r),B.hA,new A.lB(q,r),B.ew],l),B.aX,B.bd,B.by),r)),r,t.eq))}}
 A.afA.prototype={
 $0(){A.aw9(this.a)},
 $S:0}
@@ -83465,7 +83465,7 @@ $R:3,
 $S:488}
 A.Jy.prototype={
 L(a){var s,r,q,p=null
-A.aIb($.avB,B.jm)
+A.aIb($.avB,B.jj)
 s=A.b([new A.vT(new A.tZ(new A.a5x(),p,p,p,A.aJE(),A.aIt(),t.eJ),p,p,p,p,t.UL)],t.Ds)
 r=$.ayC()
 q=new A.jy(A.aA(t.Fc),new A.LD($.ayG()).gHB(),"/error",new A.bH(p,t.b7),A.b([],t.xo),A.arc(),A.b([],t.wj),$.ar())
@@ -86772,21 +86772,42 @@ B.E9=A.b(s([0,1]),t.up)
 B.Ea=A.b(s([0,6,12,18]),t.t)
 B.C={name:0,image:1,url:2}
 B.tr=new A.aD(B.C,["Sky Sports Football","image/skyfootball.png",u.z],t.w)
+B.tc=new A.aD(B.C,["Sky Sports Cricket","image/sky.png","https://stream.crichd.vip/update/skys2.php"],t.w)
+B.tb=new A.aD(B.C,["Star Sports","image/star.jpg","https://stream.crichd.vip/update/star.php"],t.w)
+B.tf=new A.aD(B.C,["Star Sports Hindi","image/starhindi.jpg","https://stream.crichd.vip/update/star1hi.php"],t.w)
+B.tl=new A.aD(B.C,["Willow Cricket","image/willow.jpg","https://stream.crichd.vip/update/willowcricket.php"],t.w)
+B.to=new A.aD(B.C,["Willow Cricket Xtra","image/xtra.jpg","https://stream.crichd.vip/update/willowextra.php"],t.w)
 B.tq=new A.aD(B.C,["Sony Espn","image/espn.jpg",u._],t.w)
-B.tg=new A.aD(B.C,["Super Maximo 1","image/maxi1.png","https://stream.crichd.vip/update/ssmeximo.php"],t.w)
-B.tn=new A.aD(B.C,["BBC ONE","image/bbc.png","https://stream.crichd.vip/update/ch1.php"],t.w)
+B.t8=new A.aD(B.C,["Fox Cricket","image/fox.jpg","https://stream.crichd.vip/update/fox501.php"],t.w)
 B.t7=new A.aD(B.C,["Sony Ten 1","image/ten1.png","https://stream.crichd.vip/update/ten1.php"],t.w)
+B.Hy=new A.aD(B.C,["Ten Sports","image/ts.jpg","https://stream.crichd.vip/update/tensp.php"],t.w)
 B.t9=new A.aD(B.C,["Sports Tv1","image/1.jpg",u._],t.w)
 B.td=new A.aD(B.C,["Sony Six","image/six.png",u._],t.w)
+B.HB=new A.aD(B.C,["TNT Sports","image/tnt.jpg","https://stream.crichd.vip/update/bt1.php"],t.w)
 B.tj=new A.aD(B.C,["Geo Super","image/geo.jpg",u._],t.w)
+B.ti=new A.aD(B.C,["Super Cricket","image/s.jpg","https://stream.crichd.vip/update/sscricket.php"],t.w)
 B.ta=new A.aD(B.C,["Viaplay Sports 1","image/via.jpg","https://stream.crichd.vip/update/premier.php"],t.w)
+B.HH=new A.aD(B.C,["Super Rugby","image/ru.png","https://stream.crichd.vip/update/ssrugby.php"],t.w)
 B.tm=new A.aD(B.C,["Super Football","image/ssfootball.png","https://stream.crichd.vip/update/ssfotbal.php"],t.w)
+B.HD=new A.aD(B.C,["Sky Box Office","image/box.png","https://stream.crichd.vip/update/ch20.php"],t.w)
 B.te=new A.aD(B.C,["Laliga Tv","image/laliga.png","https://stream.crichd.vip/update/laligauk.php"],t.w)
+B.th=new A.aD(B.C,["PTV Sports","image/ptv.png","https://stream.crichd.vip/update/ptv.php"],t.w)
 B.tk=new A.aD(B.C,["Euro Sports 1","image/euro1.jpg","https://stream.crichd.vip/update/euro1.php"],t.w)
+B.HE=new A.aD(B.C,["Sky Sports Arena","image/arena.jpg","https://stream.crichd.vip/update/skysarena.php"],t.w)
+B.Hz=new A.aD(B.C,["TNT Sports 4","image/tnt4.png","https://stream.crichd.vip/update/espn.php.php"],t.w)
+B.HA=new A.aD(B.C,["Euro Sports 2","image/euro2.png","https://stream.crichd.vip/update/euro2.php"],t.w)
+B.tn=new A.aD(B.C,["BBC ONE","image/bbc.png","https://stream.crichd.vip/update/ch1.php"],t.w)
 B.HJ=new A.aD(B.C,["Super Tennis","image/tennis.png","https://stream.crichd.vip/update/sstennis.php"],t.w)
+B.Hx=new A.aD(B.C,["Sky Sports F1","image/f1.png","https://stream.crichd.vip/update/skyf1.php"],t.w)
 B.tp=new A.aD(B.C,["Sky Sports Mix","image/mix.jpg","https://stream.crichd.vip/update/skysmix.php"],t.w)
-B.Eb=A.b(s([B.tr,B.tq,B.tg,B.tn,B.t7,B.t9,B.td,B.tj,B.ta,B.tm,B.te,B.tk,B.HJ,B.tp]),t.m0)
-B.Ed=A.b(s([0,0,32722,12287,65534,34815,65534,18431]),t.t)
+B.HG=new A.aD(B.C,["ITV 4 UK","image/i.jpg","https://stream.crichd.vip/update/itv4.php"],t.w)
+B.HC=new A.aD(B.C,["Sky Sports Golf","image/gf.png","https://stream.crichd.vip/update/skys4.php"],t.w)
+B.HI=new A.aD(B.C,["Super Grandstand","image/grand.png","https://stream.crichd.vip/update/ssgrandstand.php"],t.w)
+B.Hw=new A.aD(B.C,["BBC TWO","image/bbc2.png","https://stream.crichd.vip/update/ch5.php"],t.w)
+B.HF=new A.aD(B.C,["Sky Sports NZ","image/sky3.png","https://stream.crichd.vip/update/sky3nz.php"],t.w)
+B.tg=new A.aD(B.C,["Super Maximo 1","image/maxi1.png","https://stream.crichd.vip/update/ssmeximo.php"],t.w)
+B.jj=A.b(s([B.tr,B.tc,B.tb,B.tf,B.tl,B.to,B.tq,B.t8,B.t7,B.Hy,B.t9,B.td,B.HB,B.tj,B.ti,B.ta,B.HH,B.tm,B.HD,B.te,B.th,B.tk,B.HE,B.Hz,B.HA,B.tn,B.HJ,B.Hx,B.tp,B.HG,B.HC,B.HI,B.Hw,B.HF,B.tg]),t.m0)
+B.Ec=A.b(s([0,0,32722,12287,65534,34815,65534,18431]),t.t)
 B.fG=A.b(s([0,0,65490,45055,65535,34815,65534,18431]),t.t)
 B.ey=new A.kz(0,"left")
 B.ko=new A.kz(1,"right")
@@ -86794,8 +86815,8 @@ B.kp=new A.kz(2,"center")
 B.ez=new A.kz(3,"justify")
 B.aT=new A.kz(4,"start")
 B.kq=new A.kz(5,"end")
-B.Eu=A.b(s([B.ey,B.ko,B.kp,B.ez,B.aT,B.kq]),A.an("v<kz>"))
-B.EA=A.b(s([0,0,32754,11263,65534,34815,65534,18431]),t.t)
+B.Et=A.b(s([B.ey,B.ko,B.kp,B.ez,B.aT,B.kq]),A.an("v<kz>"))
+B.Ez=A.b(s([0,0,32754,11263,65534,34815,65534,18431]),t.t)
 B.Tc=new A.kM(0,0)
 B.Tf=new A.kM(1,0.05)
 B.Te=new A.kM(3,0.08)
@@ -86803,7 +86824,8 @@ B.Tg=new A.kM(6,0.11)
 B.Td=new A.kM(8,0.12)
 B.Th=new A.kM(12,0.14)
 B.n1=A.b(s([B.Tc,B.Tf,B.Te,B.Tg,B.Td,B.Th]),A.an("v<kM>"))
-B.EC=A.b(s([4,9,14,19]),t.t)
+B.EB=A.b(s([4,9,14,19]),t.t)
+B.ES=A.b(s([B.tr,B.tq,B.tg,B.tn,B.t7,B.t9,B.td,B.tj,B.ta,B.tm,B.te,B.tk,B.tp]),t.m0)
 B.A6=new A.pT()
 B.eo=new A.LS(1,"page")
 B.hm=new A.dJ(B.E,B.eo)
@@ -86820,12 +86842,12 @@ B.Fc=A.b(s([71,73,70,56,55,97]),t.Z)
 B.DN=new A.jX(B.Fc,"image/gif")
 B.Fd=A.b(s([71,73,70,56,57,97]),t.Z)
 B.DO=new A.jX(B.Fd,"image/gif")
-B.Ec=A.b(s([255,216,255]),t.Z)
-B.DM=new A.jX(B.Ec,"image/jpeg")
+B.Eb=A.b(s([255,216,255]),t.Z)
+B.DM=new A.jX(B.Eb,"image/jpeg")
 B.EY=A.b(s([82,73,70,70,null,null,null,null,87,69,66,80]),t.Z)
 B.DL=new A.jX(B.EY,"image/webp")
-B.EM=A.b(s([66,77]),t.Z)
-B.DK=new A.jX(B.EM,"image/bmp")
+B.EL=A.b(s([66,77]),t.Z)
+B.DK=new A.jX(B.EL,"image/bmp")
 B.F5=A.b(s([B.DJ,B.DN,B.DO,B.DM,B.DL,B.DK]),A.an("v<jX>"))
 B.lM=new A.E(419430400)
 B.Iq=new A.j(0,2)
@@ -86842,16 +86864,8 @@ B.X=new A.Al(0,"upstream")
 B.Ff=A.b(s([B.X,B.i]),A.an("v<Al>"))
 B.T=new A.mx(0,"rtl")
 B.o=new A.mx(1,"ltr")
-B.jj=A.b(s([B.T,B.o]),A.an("v<mx>"))
+B.jk=A.b(s([B.T,B.o]),A.an("v<mx>"))
 B.n5=A.b(s([0,0,32776,33792,1,10240,0,0]),t.t)
-B.tc=new A.aD(B.C,["Sky Sports Cricket","image/sky.png","https://stream.crichd.vip/update/skys2.php"],t.w)
-B.tb=new A.aD(B.C,["Star Sports","image/star.jpg","https://stream.crichd.vip/update/star.php"],t.w)
-B.tf=new A.aD(B.C,["Star Sports Hindi","image/starhindi.jpg","https://stream.crichd.vip/update/star1hi.php"],t.w)
-B.tl=new A.aD(B.C,["Willow Cricket","image/willow.jpg","https://stream.crichd.vip/update/willowcricket.php"],t.w)
-B.t8=new A.aD(B.C,["Fox Cricket","image/fox.jpg","https://stream.crichd.vip/update/fox501.php"],t.w)
-B.ti=new A.aD(B.C,["Super Cricket","image/s.jpg","https://stream.crichd.vip/update/sscricket.php"],t.w)
-B.th=new A.aD(B.C,["PTV Sports","image/ptv.png","https://stream.crichd.vip/update/ptv.php"],t.w)
-B.to=new A.aD(B.C,["Willow Cricket Xtra","image/xtra.jpg","https://stream.crichd.vip/update/willowextra.php"],t.w)
 B.Fj=A.b(s([B.tc,B.tb,B.tf,B.tl,B.t8,B.ti,B.th,B.to]),t.m0)
 B.Dm=new A.h7(0)
 B.Dn=new A.h7(1)
@@ -86874,9 +86888,9 @@ B.FE=A.b(s([]),t.tc)
 B.fH=A.b(s([]),t.jl)
 B.FD=A.b(s([]),t.fy)
 B.FC=A.b(s([]),A.an("v<k9<@>>"))
-B.jk=A.b(s([]),t.AO)
+B.jl=A.b(s([]),t.AO)
 B.FA=A.b(s([]),t.D1)
-B.jl=A.b(s([]),t.QF)
+B.jm=A.b(s([]),t.QF)
 B.FF=A.b(s([]),t.Lx)
 B.Fx=A.b(s([]),t.fm)
 B.Fv=A.b(s([]),t.E)
@@ -86913,20 +86927,6 @@ B.yU=new A.tY(2,"bottomLeft")
 B.T8=new A.kK(B.yT,B.yU)
 B.T9=new A.kK(B.yU,B.yT)
 B.FI=A.b(s([B.T7,B.Ta,B.T8,B.T9]),A.an("v<kK>"))
-B.Hy=new A.aD(B.C,["Ten Sports","image/ts.jpg","https://stream.crichd.vip/update/tensp.php"],t.w)
-B.HB=new A.aD(B.C,["TNT Sports","image/tnt.jpg","https://stream.crichd.vip/update/bt1.php"],t.w)
-B.HH=new A.aD(B.C,["Super Rugby","image/ru.png","https://stream.crichd.vip/update/ssrugby.php"],t.w)
-B.HD=new A.aD(B.C,["Sky Box Office","image/box.png","https://stream.crichd.vip/update/ch20.php"],t.w)
-B.HE=new A.aD(B.C,["Sky Sports Arena","image/arena.jpg","https://stream.crichd.vip/update/skysarena.php"],t.w)
-B.Hz=new A.aD(B.C,["TNT Sports 4","image/tnt4.png","https://stream.crichd.vip/update/espn.php.php"],t.w)
-B.HA=new A.aD(B.C,["Euro Sports 2","image/euro2.png","https://stream.crichd.vip/update/euro2.php"],t.w)
-B.Hx=new A.aD(B.C,["Sky Sports F1","image/f1.png","https://stream.crichd.vip/update/skyf1.php"],t.w)
-B.HG=new A.aD(B.C,["ITV 4 UK","image/i.jpg","https://stream.crichd.vip/update/itv4.php"],t.w)
-B.HC=new A.aD(B.C,["Sky Sports Golf","image/gf.png","https://stream.crichd.vip/update/skys4.php"],t.w)
-B.HI=new A.aD(B.C,["Super Grandstand","image/grand.png","https://stream.crichd.vip/update/ssgrandstand.php"],t.w)
-B.Hw=new A.aD(B.C,["BBC TWO","image/bbc2.png","https://stream.crichd.vip/update/ch5.php"],t.w)
-B.HF=new A.aD(B.C,["Sky Sports NZ","image/sky3.png","https://stream.crichd.vip/update/sky3nz.php"],t.w)
-B.jm=A.b(s([B.tr,B.tc,B.tb,B.tf,B.tl,B.to,B.tq,B.t8,B.t7,B.Hy,B.t9,B.td,B.HB,B.tj,B.ti,B.ta,B.HH,B.tm,B.HD,B.te,B.th,B.tk,B.HE,B.Hz,B.HA,B.tn,B.Hx,B.tp,B.HG,B.HC,B.HI,B.Hw,B.HF,B.tg]),t.m0)
 B.d1=new A.fH(0,"controlModifier")
 B.d2=new A.fH(1,"shiftModifier")
 B.d3=new A.fH(2,"altModifier")
@@ -87066,66 +87066,66 @@ B.FP=A.b(s([B.ea,B.ea,B.fQ,null]),t.L)
 B.fM=new A.f(4294967555)
 B.Fl=A.b(s([B.fM,null,B.fM,null]),t.L)
 B.bw=new A.f(4294968065)
-B.EN=A.b(s([B.bw,null,null,B.cx]),t.L)
+B.EM=A.b(s([B.bw,null,null,B.cx]),t.L)
 B.bl=new A.f(4294968066)
-B.EO=A.b(s([B.bl,null,null,B.cy]),t.L)
+B.EN=A.b(s([B.bl,null,null,B.cy]),t.L)
 B.bm=new A.f(4294968067)
-B.EP=A.b(s([B.bm,null,null,B.cz]),t.L)
+B.EO=A.b(s([B.bm,null,null,B.cz]),t.L)
 B.bx=new A.f(4294968068)
-B.EB=A.b(s([B.bx,null,null,B.cA]),t.L)
+B.EA=A.b(s([B.bx,null,null,B.cA]),t.L)
 B.js=new A.f(4294968321)
 B.EW=A.b(s([B.js,null,null,B.jA]),t.L)
 B.FQ=A.b(s([B.e9,B.e9,B.fP,null]),t.L)
 B.EU=A.b(s([B.b_,null,null,B.cw]),t.L)
 B.ct=new A.f(4294968069)
-B.EQ=A.b(s([B.ct,null,null,B.ec]),t.L)
+B.EP=A.b(s([B.ct,null,null,B.ec]),t.L)
 B.fL=new A.f(4294967309)
 B.jy=new A.f(8589935117)
-B.EL=A.b(s([B.fL,null,null,B.jy]),t.L)
+B.EK=A.b(s([B.fL,null,null,B.jy]),t.L)
 B.cu=new A.f(4294968070)
-B.ER=A.b(s([B.cu,null,null,B.ee]),t.L)
+B.EQ=A.b(s([B.cu,null,null,B.ee]),t.L)
 B.jt=new A.f(4294968327)
 B.EX=A.b(s([B.jt,null,null,B.jz]),t.L)
 B.FR=A.b(s([B.eb,B.eb,B.fR,null]),t.L)
 B.e7=new A.f(4294968071)
-B.ES=A.b(s([B.e7,null,null,B.ed]),t.L)
+B.ER=A.b(s([B.e7,null,null,B.ed]),t.L)
 B.e8=new A.f(4294968072)
-B.Ee=A.b(s([B.e8,null,null,B.ef]),t.L)
+B.Ed=A.b(s([B.e8,null,null,B.ef]),t.L)
 B.FS=A.b(s([B.c4,B.c4,B.cv,null]),t.L)
-B.Hs=new A.d6(["*",B.F0,"+",B.F1,"-",B.F2,".",B.F3,"/",B.F4,"0",B.Fm,"1",B.Fn,"2",B.Fo,"3",B.Fp,"4",B.Fq,"5",B.Fr,"6",B.Fs,"7",B.Ft,"8",B.Fh,"9",B.Fi,"Alt",B.FP,"AltGraph",B.Fl,"ArrowDown",B.EN,"ArrowLeft",B.EO,"ArrowRight",B.EP,"ArrowUp",B.EB,"Clear",B.EW,"Control",B.FQ,"Delete",B.EU,"End",B.EQ,"Enter",B.EL,"Home",B.ER,"Insert",B.EX,"Meta",B.FR,"PageDown",B.ES,"PageUp",B.Ee,"Shift",B.FS],A.an("d6<o,G<f?>>"))
-B.Es=A.b(s([42,null,null,8589935146]),t.Z)
-B.Et=A.b(s([43,null,null,8589935147]),t.Z)
-B.Ev=A.b(s([45,null,null,8589935149]),t.Z)
-B.Ew=A.b(s([46,null,null,8589935150]),t.Z)
-B.Ex=A.b(s([47,null,null,8589935151]),t.Z)
-B.Ey=A.b(s([48,null,null,8589935152]),t.Z)
-B.Ez=A.b(s([49,null,null,8589935153]),t.Z)
-B.ED=A.b(s([50,null,null,8589935154]),t.Z)
-B.EE=A.b(s([51,null,null,8589935155]),t.Z)
-B.EF=A.b(s([52,null,null,8589935156]),t.Z)
-B.EG=A.b(s([53,null,null,8589935157]),t.Z)
-B.EH=A.b(s([54,null,null,8589935158]),t.Z)
-B.EI=A.b(s([55,null,null,8589935159]),t.Z)
-B.EJ=A.b(s([56,null,null,8589935160]),t.Z)
-B.EK=A.b(s([57,null,null,8589935161]),t.Z)
+B.Hs=new A.d6(["*",B.F0,"+",B.F1,"-",B.F2,".",B.F3,"/",B.F4,"0",B.Fm,"1",B.Fn,"2",B.Fo,"3",B.Fp,"4",B.Fq,"5",B.Fr,"6",B.Fs,"7",B.Ft,"8",B.Fh,"9",B.Fi,"Alt",B.FP,"AltGraph",B.Fl,"ArrowDown",B.EM,"ArrowLeft",B.EN,"ArrowRight",B.EO,"ArrowUp",B.EA,"Clear",B.EW,"Control",B.FQ,"Delete",B.EU,"End",B.EP,"Enter",B.EK,"Home",B.EQ,"Insert",B.EX,"Meta",B.FR,"PageDown",B.ER,"PageUp",B.Ed,"Shift",B.FS],A.an("d6<o,G<f?>>"))
+B.Er=A.b(s([42,null,null,8589935146]),t.Z)
+B.Es=A.b(s([43,null,null,8589935147]),t.Z)
+B.Eu=A.b(s([45,null,null,8589935149]),t.Z)
+B.Ev=A.b(s([46,null,null,8589935150]),t.Z)
+B.Ew=A.b(s([47,null,null,8589935151]),t.Z)
+B.Ex=A.b(s([48,null,null,8589935152]),t.Z)
+B.Ey=A.b(s([49,null,null,8589935153]),t.Z)
+B.EC=A.b(s([50,null,null,8589935154]),t.Z)
+B.ED=A.b(s([51,null,null,8589935155]),t.Z)
+B.EE=A.b(s([52,null,null,8589935156]),t.Z)
+B.EF=A.b(s([53,null,null,8589935157]),t.Z)
+B.EG=A.b(s([54,null,null,8589935158]),t.Z)
+B.EH=A.b(s([55,null,null,8589935159]),t.Z)
+B.EI=A.b(s([56,null,null,8589935160]),t.Z)
+B.EJ=A.b(s([57,null,null,8589935161]),t.Z)
 B.F8=A.b(s([8589934852,8589934852,8589934853,null]),t.Z)
-B.Eh=A.b(s([4294967555,null,4294967555,null]),t.Z)
-B.Ei=A.b(s([4294968065,null,null,8589935154]),t.Z)
-B.Ej=A.b(s([4294968066,null,null,8589935156]),t.Z)
-B.Ek=A.b(s([4294968067,null,null,8589935158]),t.Z)
-B.El=A.b(s([4294968068,null,null,8589935160]),t.Z)
-B.Eq=A.b(s([4294968321,null,null,8589935157]),t.Z)
+B.Eg=A.b(s([4294967555,null,4294967555,null]),t.Z)
+B.Eh=A.b(s([4294968065,null,null,8589935154]),t.Z)
+B.Ei=A.b(s([4294968066,null,null,8589935156]),t.Z)
+B.Ej=A.b(s([4294968067,null,null,8589935158]),t.Z)
+B.Ek=A.b(s([4294968068,null,null,8589935160]),t.Z)
+B.Ep=A.b(s([4294968321,null,null,8589935157]),t.Z)
 B.F9=A.b(s([8589934848,8589934848,8589934849,null]),t.Z)
-B.Eg=A.b(s([4294967423,null,null,8589935150]),t.Z)
-B.Em=A.b(s([4294968069,null,null,8589935153]),t.Z)
-B.Ef=A.b(s([4294967309,null,null,8589935117]),t.Z)
-B.En=A.b(s([4294968070,null,null,8589935159]),t.Z)
-B.Er=A.b(s([4294968327,null,null,8589935152]),t.Z)
+B.Ef=A.b(s([4294967423,null,null,8589935150]),t.Z)
+B.El=A.b(s([4294968069,null,null,8589935153]),t.Z)
+B.Ee=A.b(s([4294967309,null,null,8589935117]),t.Z)
+B.Em=A.b(s([4294968070,null,null,8589935159]),t.Z)
+B.Eq=A.b(s([4294968327,null,null,8589935152]),t.Z)
 B.Fa=A.b(s([8589934854,8589934854,8589934855,null]),t.Z)
-B.Eo=A.b(s([4294968071,null,null,8589935155]),t.Z)
-B.Ep=A.b(s([4294968072,null,null,8589935161]),t.Z)
+B.En=A.b(s([4294968071,null,null,8589935155]),t.Z)
+B.Eo=A.b(s([4294968072,null,null,8589935161]),t.Z)
 B.Fb=A.b(s([8589934850,8589934850,8589934851,null]),t.Z)
-B.t6=new A.d6(["*",B.Es,"+",B.Et,"-",B.Ev,".",B.Ew,"/",B.Ex,"0",B.Ey,"1",B.Ez,"2",B.ED,"3",B.EE,"4",B.EF,"5",B.EG,"6",B.EH,"7",B.EI,"8",B.EJ,"9",B.EK,"Alt",B.F8,"AltGraph",B.Eh,"ArrowDown",B.Ei,"ArrowLeft",B.Ej,"ArrowRight",B.Ek,"ArrowUp",B.El,"Clear",B.Eq,"Control",B.F9,"Delete",B.Eg,"End",B.Em,"Enter",B.Ef,"Home",B.En,"Insert",B.Er,"Meta",B.Fa,"PageDown",B.Eo,"PageUp",B.Ep,"Shift",B.Fb],A.an("d6<o,G<r?>>"))
+B.t6=new A.d6(["*",B.Er,"+",B.Es,"-",B.Eu,".",B.Ev,"/",B.Ew,"0",B.Ex,"1",B.Ey,"2",B.EC,"3",B.ED,"4",B.EE,"5",B.EF,"6",B.EG,"7",B.EH,"8",B.EI,"9",B.EJ,"Alt",B.F8,"AltGraph",B.Eg,"ArrowDown",B.Eh,"ArrowLeft",B.Ei,"ArrowRight",B.Ej,"ArrowUp",B.Ek,"Clear",B.Ep,"Control",B.F9,"Delete",B.Ef,"End",B.El,"Enter",B.Ee,"Home",B.Em,"Insert",B.Eq,"Meta",B.Fa,"PageDown",B.En,"PageUp",B.Eo,"Shift",B.Fb],A.an("d6<o,G<r?>>"))
 B.Ht=new A.d6([0,"FontWeight.w100",1,"FontWeight.w200",2,"FontWeight.w300",3,"FontWeight.w400",4,"FontWeight.w500",5,"FontWeight.w600",6,"FontWeight.w700",7,"FontWeight.w800",8,"FontWeight.w900"],A.an("d6<r,o>"))
 B.Ip={"deleteBackward:":0,"deleteWordBackward:":1,"deleteToBeginningOfLine:":2,"deleteForward:":3,"deleteWordForward:":4,"deleteToEndOfLine:":5,"moveLeft:":6,"moveRight:":7,"moveForward:":8,"moveBackward:":9,"moveUp:":10,"moveDown:":11,"moveLeftAndModifySelection:":12,"moveRightAndModifySelection:":13,"moveUpAndModifySelection:":14,"moveDownAndModifySelection:":15,"moveWordLeft:":16,"moveWordRight:":17,"moveToBeginningOfParagraph:":18,"moveToEndOfParagraph:":19,"moveWordLeftAndModifySelection:":20,"moveWordRightAndModifySelection:":21,"moveParagraphBackwardAndModifySelection:":22,"moveParagraphForwardAndModifySelection:":23,"moveToLeftEndOfLine:":24,"moveToRightEndOfLine:":25,"moveToBeginningOfDocument:":26,"moveToEndOfDocument:":27,"moveToLeftEndOfLineAndModifySelection:":28,"moveToRightEndOfLineAndModifySelection:":29,"moveToBeginningOfDocumentAndModifySelection:":30,"moveToEndOfDocumentAndModifySelection:":31,"transpose:":32,"scrollToBeginningOfDocument:":33,"scrollToEndOfDocument:":34,"scrollPageUp:":35,"scrollPageDown:":36,"pageUpAndModifySelection:":37,"pageDownAndModifySelection:":38,"cancelOperation:":39,"insertTab:":40,"insertBacktab:":41}
 B.xx=new A.kp(!1)
@@ -88067,8 +88067,8 @@ B.k6=new A.rZ(1,"nextLine")
 B.hp=new A.rZ(2,"forward")
 B.hq=new A.rZ(3,"backward")
 B.di=new A.zM(2,"none")
-B.Kx=new A.ml(null,null,B.di,B.jk,!1)
-B.xE=new A.ml(null,null,B.di,B.jk,!0)
+B.Kx=new A.ml(null,null,B.di,B.jl,!1)
+B.xE=new A.ml(null,null,B.di,B.jl,!0)
 B.aD=new A.mm(0,"next")
 B.aS=new A.mm(1,"previous")
 B.aE=new A.mm(2,"end")

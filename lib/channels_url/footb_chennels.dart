@@ -67,11 +67,7 @@ const List<Map<String, String>> footballChannelList = [
     'image': "image/euro1.jpg",
     'url': 'https://stream.crichd.vip/update/euro1.php',
   },
-     {
-    'name': "Super Tennis",
-    'image': "image/tennis.png",
-    'url': 'https://stream.crichd.vip/update/sstennis.php',
-  },
+
   {
     'name': "Sky Sports Mix",
     'image': "image/mix.jpg",
