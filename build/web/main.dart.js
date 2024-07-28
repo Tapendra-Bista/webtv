@@ -83520,7 +83520,7 @@ p=A.a_(a).p2.e
 p.toString
 return A.rU(A.nl(o,!0,s.fr,o,!0,o,new A.hI(B.i4,o,o,l,o),m.a.a*0.2,A.avr(q,p.R_(B.j,A.nl(o,!0,o,o,o,o,o,o,o).fx.b/2,B.A))),new A.cm(new A.ah8(),A.Mc(new A.bP(B.dQ,A.ln(A.b([new A.bP(B.CT,A.cx("Live Tv Channels Online Free Free Free",o,o,o,n.hX(25),o,o),o),new A.bP(B.iV,A.cx(u.N,o,o,o,n.hX(14),o,o),o),new A.bP(B.iV,A.cx(" Double-tap on the screen to enter full-screen mode. ",o,o,o,n.rI(A.a_(a).fr,18),o,o),o),new A.bP(B.iV,A.aqj(new A.ah9(n),r),o),B.DH,new A.lA(n,o),B.ew],t.E),B.aX,B.bd,B.by),o)),o,t.eq))}}
 A.ah7.prototype={
-$0(){return A.aq_(this.a,"/home")},
+$0(){return A.aq_(this.a,"/")},
 $S:0}
 A.ah8.prototype={
 $1(a){a.c=!1
@@ -83579,7 +83579,7 @@ $R:3,
 $S:21}
 A.alO.prototype={
 $3(a,b,c){var s=null
-return A.apY(A.rU(s,A.hO(A.cx("No Result !",s,s,s,A.a_(a).p2.e,s,s),s,s)),B.SK,"webtv","webtv")},
+return A.apY(A.rU(s,A.hO(A.cx("404\nPage not found",s,s,s,A.a_(a).p2.e,s,s),s,s)),B.SK,"webtv","webtv")},
 $C:"$3",
 $R:3,
 $S:21}
