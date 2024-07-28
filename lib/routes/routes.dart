@@ -40,7 +40,7 @@ var routes = {
         child: Scaffold(
             body: Center(
           child: Text(
-            "No Result !",
+            "404\nPage not found",
             style: Theme.of(context).textTheme.headlineMedium,
           ),
         )), // widget
