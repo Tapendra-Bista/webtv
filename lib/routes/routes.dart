@@ -13,26 +13,21 @@ var routes = {
         name: 'webtv',
         child: Home(), // widget
       ),
-  "/home": (context, state, data) => const BeamPage(
-        key: ValueKey('/home'),
-        title: 'webtv',
-        name: 'webtv',
-        child: Home(), // widget
-      ),
-  "/home/cricket": (context, state, data) => const BeamPage(
+
+  "/cricket": (context, state, data) => const BeamPage(
         key: ValueKey('/home/cricket'),
         title: 'webtv',
         name: 'webtv',
 
         child: Cricket(), // widget
       ),
-  "/home/football": (context, state, data) => const BeamPage(
+  "/football": (context, state, data) => const BeamPage(
         key: ValueKey('/home/football'),
         title: 'webtv',
         name: 'webtv',
         child: Football(), // widget
       ),
-  "/home/all_sports": (context, state, data) => const BeamPage(
+  "/all_sports": (context, state, data) => const BeamPage(
         key: ValueKey('/home/all'),
         title: 'webtv',
         name: 'webtv',
@@ -50,27 +45,27 @@ var routes = {
           ),
         )), // widget
       ),
-  '/home/play/:update/:link/:title': (context, state, data) => const BeamPage(
+  '/play/:update/:link/:title': (context, state, data) => const BeamPage(
         key: ValueKey('/home/play/'),
         title: 'webtv',
         name: 'webtv',
         child: Play(), // widget
       ),
-  '/home/cricket/play/:update/:link/:title': (context, state, data) =>
+  '/cricket/play/:update/:link/:title': (context, state, data) =>
       const BeamPage(
         key: ValueKey('/home/cricket/play/'),
         title: 'webtv',
         name: 'webtv',
         child: Play(), // widget
       ),
-  '/home/football/play/:update/:link/:title': (context, state, data) =>
+  '/football/play/:update/:link/:title': (context, state, data) =>
       const BeamPage(
         key: ValueKey('/home/football/play/'),
         title: 'webtv',
         name: 'webtv',
         child: Play(), // widget
       ),
-  '/home/all_sports/play/:update/:link/:title': (context, state, data) =>
+  '/all_sports/play/:update/:link/:title': (context, state, data) =>
       const BeamPage(
         key: ValueKey('/home/all/play/'),
         title: 'webtv',

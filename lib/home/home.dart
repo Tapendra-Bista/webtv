@@ -89,7 +89,7 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 GridItems(
-                  adressUrl: "/home/play",
+                  adressUrl: "/play",
                   itemNumber: itemNumber,
                   mytextStyle: mytextStyle,
                   myList: channelList,

@@ -59,7 +59,7 @@ class _CricketState extends State<Cricket> {
                   ),
                 ),
                 GridItems(
-                  adressUrl: "/home/cricket/play",
+                  adressUrl: "/cricket/play",
                   itemNumber: itemNumber,
                   mytextStyle: mytextStyle,
                   myList: cricketChannelList,

@@ -57,7 +57,7 @@ class _FootballState extends State<Football> {
                   ),
                 ),
                 GridItems(
-                  adressUrl: "/home/football/play",
+                  adressUrl: "/football/play",
                   itemNumber: itemNumber,
                   mytextStyle: mytextStyle,
                   myList: footballChannelList,

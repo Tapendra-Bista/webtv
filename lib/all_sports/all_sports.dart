@@ -58,7 +58,7 @@ class _AllSportsState extends State<AllSports> {
                   ),
                 ),
                GridItems(
-               adressUrl: "/home/all_sports/play",
+               adressUrl: "/all_sports/play",
                 itemNumber: itemNumber, mytextStyle: mytextStyle,myList:channelList,),
                 const SizedBox(
                   height: 30,

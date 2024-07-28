@@ -24,7 +24,7 @@ AppBar myAppBar(BuildContext context, String text) {
       leading: Align(
           alignment: Alignment.bottomLeft,
           child: GestureDetector(
-            onTap: () => context.beamToReplacementNamed('/home'),
+            onTap: () => context.beamToReplacementNamed("/"),
             child: Container(
                 height: AppBar().preferredSize.height,
                 color: Colors.white,

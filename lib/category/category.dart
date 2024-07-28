@@ -32,7 +32,7 @@ class Category extends StatelessWidget {
                 style: buttonStyle,
                 onPressed: () {
            
-                  Beamer.of(context).beamToNamed("/home/all_sports");
+                  Beamer.of(context).beamToNamed("/all_sports");
                 },
                 label: Text("All Sports", style: mytextStyle)),
           ),
@@ -49,7 +49,7 @@ class Category extends StatelessWidget {
                 style: buttonStyle,
                 onPressed: () {
                   
-                  Beamer.of(context).beamToNamed('/home/cricket');
+                  Beamer.of(context).beamToNamed('/cricket');
                 },
                 label: Text("Cricket", style: mytextStyle)),
           ),
@@ -65,7 +65,7 @@ class Category extends StatelessWidget {
                 ),
                 style: buttonStyle,
                 onPressed: () {
-                  Beamer.of(context).beamToNamed('/home/football');
+                  Beamer.of(context).beamToNamed('/football');
                 },
                 label: Text("Football", style: mytextStyle)),
           ),
