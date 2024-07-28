@@ -38,12 +38,23 @@ var routes = {
         title: 'webtv',
         name: 'webtv',
         child: Scaffold(
-            body: Center(
-          child: Text(
-            "404\nPage not found",
-            style: Theme.of(context).textTheme.headlineMedium,
-          ),
-        )), // widget
+            body: Column(
+       mainAxisAlignment: MainAxisAlignment.center,       
+              children: [
+                 Center(
+                          child: Text(
+                "404",
+                style: Theme.of(context).textTheme.headlineMedium!.copyWith(fontSize:60,fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                Center(
+                          child: Text(
+                "Page not found",
+                style: Theme.of(context).textTheme.headlineMedium!.copyWith(fontWeight: FontWeight.bold),
+                          ),
+                        ),
+              ],
+            )), // widget
       ),
   '/play/:update/:link/:title': (context, state, data) => const BeamPage(
         key: ValueKey('/home/play/'),
