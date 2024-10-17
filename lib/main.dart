@@ -10,7 +10,6 @@ import 'package:webtv/theme/theme.dart';
 
 void main() {
   setPathUrlStrategy();
-
   runApp(const MyApp());
 }
 

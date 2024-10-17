@@ -56,7 +56,7 @@ class _GridItemsState extends State<GridItems> {
     try {
      
       Beamer.of(context).beamToNamed(
-          "${widget.adressUrl}/${widget.myList[index]['url']!.replaceFirst("https://stream.crichd.vip/", '')}/${widget.myList[index]['name']!}");
+          "${widget.adressUrl}/${widget.myList[index]['url']!.replaceFirst("https://stream.crichd.sc/", '')}/${widget.myList[index]['name']!}");
 
       context.read<ChannelProvider>().updated(
           channelurl: widget.myList[index]['url']!,
