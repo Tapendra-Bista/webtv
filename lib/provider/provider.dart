@@ -12,7 +12,7 @@ class ChannelProvider extends ChangeNotifier {
   final IFrameElement _iFrameElement = IFrameElement();
   ChannelProvider(
       {this.channelName = "Sky Sports Football",
-      this.channelUrl = 'https://stream.crichd.vip/update/skysfotb.php'}) ;
+      this.channelUrl = 'https://stream.crichd.sc/update/skysfotb.php'}) ;
 
   
 
